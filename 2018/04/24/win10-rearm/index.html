@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Category: Windows | JIM51</title>
+  <title>Windows 10 試用版 延長試用 | JIM51</title>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
   <meta name="HandheldFriendly" content="True" />
@@ -12,13 +12,21 @@
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="JIM51">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="JIM51">
-<meta property="og:url" content="https://jim51.github.io/categories/Windows/index.html">
+  <meta name="description" content="開發人員有時難免會需要作VM用乾淨的環境測試程式，或是其他Lab。最簡單合法的作法就是去微軟網站申請Windwos 10試用評估預設就給您90的期限，但時間到又要重裝實在很麻煩。">
+<meta name="keywords" content="Windows">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows 10 試用版 延長試用">
+<meta property="og:url" content="https://jim51.github.io/2018/04/24/win10-rearm/index.html">
 <meta property="og:site_name" content="JIM51">
+<meta property="og:description" content="開發人員有時難免會需要作VM用乾淨的環境測試程式，或是其他Lab。最簡單合法的作法就是去微軟網站申請Windwos 10試用評估預設就給您90的期限，但時間到又要重裝實在很麻煩。">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://jim51.github.io/images/x007.jpg">
+<meta property="og:image" content="https://jim51.github.io/images/x008.jpg">
+<meta property="og:updated_time" content="2018-04-24T06:08:54.400Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JIM51">
+<meta name="twitter:title" content="Windows 10 試用版 延長試用">
+<meta name="twitter:description" content="開發人員有時難免會需要作VM用乾淨的環境測試程式，或是其他Lab。最簡單合法的作法就是去微軟網站申請Windwos 10試用評估預設就給您90的期限，但時間到又要重裝實在很麻煩。">
+<meta name="twitter:image" content="https://jim51.github.io/images/x007.jpg">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -109,95 +117,67 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        
-  <script>
-    window.subData= { title:'Category : Windows'}
-  </script>
-
-<section class="post-list">
+        <article id="post-win10-rearm"
+  class="post white-box article-type-post"
+  itemscope itemprop="blogPost">
+	<section class='meta'>
+	<h2 class="title">
+  	<a href="/2018/04/24/win10-rearm/">
+    	Windows 10 試用版 延長試用
+    </a>
+  </h2>
+	<time>
+	  Apr 24, 2018
+	</time>
 	
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/04/24/win10-rearm/">
-        Windows 10 試用版 延長試用
-      </a>
-    </h2>
-    
-    <time>
-      Apr 24, 2018
-    </time>
-		
     
     <div class='cats'>
         <a href="/categories/Windows/">Windows</a>
     </div>
 
-  </section>
-  <section class="article typo">
-	  <p>開發人員有時難免會需要作VM用乾淨的環境測試程式，或是其他Lab。<br>最簡單合法的作法就是去微軟網站<a href="https://www.microsoft.com/zh-tw/windowsforbusiness/try" target="_blank" rel="noopener">申請Windwos 10試用評估</a><br>預設就給您90的期限，但時間到又要重裝實在很麻煩。<br>
+	</section>
+	
+		<section class="toc-wrapper"></section>
+	
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<p>開發人員有時難免會需要作VM用乾淨的環境測試程式，或是其他Lab。<br>最簡單合法的作法就是去微軟網站<a href="https://www.microsoft.com/zh-tw/windowsforbusiness/try" target="_blank" rel="noopener">申請Windwos 10試用評估</a><br>預設就給您90的期限，但時間到又要重裝實在很麻煩。<br><a id="more"></a><br>其實Windows 10 評估版預設就帶有二次延長試用時間。<br>當我們有這個需求時，先用命令提示字元查看看是否有延申過或到期</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slmgr -dlv</span><br></pre></td></tr></table></figure>
+<p><img src="/images/x007.jpg" alt="查詢狀況"><br>看起來次數還有二次而且還沒到期。<br>在到期前幾天或是快到期時，可以執行下次這個指令作延長</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">slmgr -rearm</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意!只要一執行後就立即起算90天了，所以愈晚輸入愈划算</p>
+</blockquote>
+<p>執行後就重新開新就可以新的90天試用了。<br><img src="/images/x008.jpg" alt="執行結"></p>
 
-    
-	  <div class="readmore">
-      <a href="/2018/04/24/win10-rearm/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
+  	</div>
+	  
+	  <div class="article-tags tags">
       
         <a href="/tags/Windows/">Windows</a>
       
 	  </div>
     
-  </section>
-</article>
-    </div>
-  
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/04/24/windows-accessing-credential-manager/">
-        Windows 內建的認證密碼管理
-      </a>
-    </h2>
-    
-    <time>
-      Apr 24, 2018
-    </time>
 		
-    
-    <div class='cats'>
-        <a href="/categories/Windows/">Windows</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <p>存取網芳或是存取遠端桌面時，常都會有記憶密碼的選項，如果改了密碼有時會造成無法登入。<br>或是你想把電腦裡的密碼刪除，官方網站提供的說明連結<a href="https://support.microsoft.com/zh-tw/help/4026814/windows-accessing-credential-manager" target="_blank" rel="noopener">存取認證管理員</a><br>如果想用下指令方式可以在命令提示字元輸入<br>
-
-    
-	  <div class="readmore">
-      <a href="/2018/04/24/windows-accessing-credential-manager/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Windows/">Windows</a>
-      
-	  </div>
-    
-  </section>
+	
+		<div class="art-item-footer">
+				
+				
+					<span class="art-item-right">next：<a href="/2018/04/24/windows-accessing-credential-manager/" rel="next"  title="Windows 內建的認證密碼管理">
+						Windows 內建的認證密碼管理
+					</a><i class="icon icon-chevron-thin-right"></i></span>
+				
+		</div>
+	
+	</section>
+	
 </article>
-    </div>
-  
-</section>
-
+<script>
+	window.subData = {
+		title: 'Windows 10 試用版 延長試用',
+		tools: true
+	}
+</script>
 
       </div>
       <aside class='l_side'>
