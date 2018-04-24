@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  <subtitle>JIM51</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://jim51.github.io/"/>
+  <updated>2018-04-23T05:40:06.255Z</updated>
+  <id>https://jim51.github.io/</id>
+  
+  <author>
+    <name>Jim</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo 簡介+架設</title>
+    <link href="https://jim51.github.io/2018/04/22/hexo-init/"/>
+    <id>https://jim51.github.io/2018/04/22/hexo-init/</id>
+    <published>2018-04-22T14:19:29.000Z</published>
+    <updated>2018-04-23T05:40:06.255Z</updated>
+    
+    <content type="html"><![CDATA[<p>本Blog是由Hexo架設而成的，想介紹一下這個超棒的Blog框架便把第一篇文章給了它。<br><a id="more"></a></p><h1 id="什麼是-Hexo？"><a href="#什麼是-Hexo？" class="headerlink" title="什麼是 Hexo？"></a>什麼是 Hexo？</h1><p>先看看官方怎麼說</p><blockquote><p>Hexo 是一個快速、簡單且強大的網誌框架。Hexo 使用 Markdown（或其他渲染引擎）解析您的文章，並在幾秒鐘內，透過漂亮的主題產生靜態檔案。</p></blockquote><p>個人覺得Hexo是個很棒的Blog框架，速度非常快而且支援多種外掛，也能用來寫技術Blog，當然也合適來寫一般Blog(如果不怕學Makrdown的話…)。</p><h1 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h1><h2 id="安裝需求"><a href="#安裝需求" class="headerlink" title="安裝需求"></a>安裝需求</h2><p>安裝Hexo非常的簡單，但最少還是需要二個軟體(可能你的電腦已經有安裝了)</p><ul><li><a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a></li><li><a href="https://nodejs.org" target="_blank" rel="noopener">Node.js</a></li></ul><p>如果您的電腦剛好已經安裝過上面軟體，只要下npm指令即可完成Hexo安裝。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure><p>如果還未安裝也沒有關係。</p><h2 id="Windows-Git"><a href="#Windows-Git" class="headerlink" title="Windows Git"></a>Windows Git</h2><p><a href="https://git-scm.com/" target="_blank" rel="noopener">Git 官網</a><br>安裝時基本上都依據預設值就可以了，特別提醒安裝中這個預設值不要動到。<br>Use Git from the Windows command Prompt<br><img src="/images/x001.jpg" alt="git安裝畫面1"><br>這個動作會在系統加入Git的Path,後面在用cmd或powershell時才用Git指令執行。<br>安裝完成後，開啟cmd確認一下是否有安裝完成。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure><p><img src="/images/x002.jpg" alt="git確認畫面"></p><h2 id="Windows-Node-js"><a href="#Windows-Node-js" class="headerlink" title="Windows Node.js"></a>Windows Node.js</h2><p><a href="https://nodejs.org" target="_blank" rel="noopener">Node.js 官網</a><br>官網的Download for Windows (x64)下面會有二個版本LTS及Current。<br>這裡會比較建議選擇Current的版本，一般來說效能及功能都會比較強。<br><img src="/images/x003.jpg" alt="node.js 版本"><br>安裝的選項都照預設就可以了，等安裝完成執行版本確認。<br>沒問題就可以進行Hexo安裝了<br><img src="/images/x004.jpg" alt="確認node.js是否正常安裝"></p><h2 id="其他平台-Git"><a href="#其他平台-Git" class="headerlink" title="其他平台 Git"></a>其他平台 Git</h2><p>Hexo 官方有提供其他平台的Git安裝說明，請至<br><a href="https://hexo.io/zh-tw/docs/#%E5%AE%89%E8%A3%9D-Git" target="_blank" rel="noopener">https://hexo.io/zh-tw/docs/#%E5%AE%89%E8%A3%9D-Git</a></p><h2 id="其他平倉-Node-js"><a href="#其他平倉-Node-js" class="headerlink" title="其他平倉 Node.js"></a>其他平倉 Node.js</h2><p>Hexo 官方有提供其他平台的Node.js安裝說明，請至<br><a href="https://hexo.io/zh-tw/docs/#%E5%AE%89%E8%A3%9D-Node-js" target="_blank" rel="noopener">https://hexo.io/zh-tw/docs/#%E5%AE%89%E8%A3%9D-Node-js</a></p><h2 id="安裝-Hexo"><a href="#安裝-Hexo" class="headerlink" title="安裝 Hexo"></a>安裝 Hexo</h2><p>當所有軟體都安裝完成後，透過npm安裝</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本Blog是由Hexo架設而成的，想介紹一下這個超棒的Blog框架便把第一篇文章給了它。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Hexo" scheme="https://jim51.github.io/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="https://jim51.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+</feed>
