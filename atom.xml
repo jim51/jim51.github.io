@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jim51.github.io/"/>
-  <updated>2018-04-24T08:29:11.602Z</updated>
+  <updated>2018-04-24T08:56:49.686Z</updated>
   <id>https://jim51.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://jim51.github.io/2018/04/24/sql-repeat-delete/"/>
     <id>https://jim51.github.io/2018/04/24/sql-repeat-delete/</id>
     <published>2018-04-24T08:24:52.000Z</published>
-    <updated>2018-04-24T08:29:11.602Z</updated>
+    <updated>2018-04-24T08:56:49.686Z</updated>
     
-    <content type="html"><![CDATA[<p>有時整理SQL資料時需要刪除重覆資料，在這裡做個筆記。</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> rowcount <span class="number">1</span></span><br><span class="line"><span class="keyword">WHILE</span> <span class="number">1</span>=<span class="number">1</span></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">  <span class="keyword">delete</span> <span class="keyword">from</span> <span class="keyword">table</span> <span class="keyword">where</span> <span class="keyword">id</span> <span class="keyword">in</span>(<span class="keyword">select</span> <span class="keyword">id</span> <span class="keyword">from</span> <span class="keyword">table</span> <span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">id</span> <span class="keyword">having</span> <span class="keyword">count</span>(*)&gt;<span class="number">1</span>)</span><br><span class="line">  <span class="keyword">if</span> @@rowcount=<span class="number">0</span></span><br><span class="line">     break</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">set</span> rowcount0</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>有時整理SQL資料時需要刪除重覆資料，在這裡做個筆記。</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> rowcount <span class="number">1</span></span><br><span class="line"><span class="keyword">WHILE</span> <span class="number">1</span>=<span class="number">1</span></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">  <span class="keyword">delete</span> <span class="keyword">from</span> <span class="keyword">table</span> <span class="keyword">where</span> <span class="keyword">id</span> <span class="keyword">in</span>(<span class="keyword">select</span> <span class="keyword">id</span> <span class="keyword">from</span> <span class="keyword">table</span> <span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">id</span> <span class="keyword">having</span> <span class="keyword">count</span>(*)&gt;<span class="number">1</span>)</span><br><span class="line">  <span class="keyword">if</span> @@rowcount=<span class="number">0</span></span><br><span class="line">     break</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">set</span> rowcount <span class="number">0</span></span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
