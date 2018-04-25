@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jim51.github.io/"/>
-  <updated>2018-04-24T08:56:49.686Z</updated>
+  <updated>2018-04-25T00:57:02.466Z</updated>
   <id>https://jim51.github.io/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>remote-desktop-delay-connestions</title>
+    <link href="https://jim51.github.io/2018/04/25/remote-desktop-delay-connestions/"/>
+    <id>https://jim51.github.io/2018/04/25/remote-desktop-delay-connestions/</id>
+    <published>2018-04-25T00:57:02.000Z</published>
+    <updated>2018-04-25T00:57:02.466Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>SQL 刪除重複資料</title>
