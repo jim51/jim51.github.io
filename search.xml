@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>Office 2016 黑色主題</title>
+      <link href="/2018/04/26/office-2016-dark-theme/"/>
+      <url>/2018/04/26/office-2016-dark-theme/</url>
+      <content type="html"><![CDATA[<p>Office 2010時有個背景主題是黑色，後來到Office 2016一開始還沒有，在2016/01月時，加入了黑色主題。<br><a id="more"></a><br>好景不常後面某一次更新時2016的黑色主題就沒了，但Office 365一直都有黑色主題，只能說微軟想做一個小小的產品區隔。  </p><p>現在就來說明如何用降版方式取得想要的黑色主題<br>首先開啟命令提示字元切換到執行目錄</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> "C:\Program Files\Common Files\microsoft shared\ClickToRun"</span><br></pre></td></tr></table></figure><p>執行降版或升版到需要版本</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">OfficeC2RClient.exe /update user updatetoversion=<span class="number">16</span>.<span class="number">0</span>.<span class="number">6568</span>.<span class="number">2034</span></span><br></pre></td></tr></table></figure><p>這時會跳一個視窗出現正在下載Office更新<br><img src="/images/x013.jpg" alt="更新Office"><br>！！<br>更新完後視窗會直接不見，此時重新開啟Office，黑色主題重新出現。<br><img src="/images/x014.jpg" alt="可選黑色主題"></p><p>還有一個很重要的步驟，把自動更新關掉。<br><img src="/images/x015.jpg" alt="關閉Office更新"></p>]]></content>
+      
+      <categories>
+          
+          <category> Office </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Office </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>Hexo裡新增Google analticts追蹤碼</title>
       <link href="/2018/04/25/hexo-google-analytics/"/>
       <url>/2018/04/25/hexo-google-analytics/</url>

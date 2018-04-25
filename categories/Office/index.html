@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>網路斷線情況下遠端(RDP)登入緩慢 | JIM51</title>
+  <title>Category: Office | JIM51</title>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
   <meta name="HandheldFriendly" content="True" />
@@ -12,20 +12,13 @@
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="JIM51">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Windows 7之後遠登入支援network level authentication(NLA)的協定，它的動作是去驗證憑證是否正常。在大多數的RDP都比較少用這個功能，但是當在網路斷線情況下卻會讓連到遠端電腦的動這個動作變的超慢。">
-<meta name="keywords" content="Windows">
-<meta property="og:type" content="article">
-<meta property="og:title" content="網路斷線情況下遠端(RDP)登入緩慢">
-<meta property="og:url" content="https://jim51.github.io/2018/04/25/remote-desktop-delay-connestions/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="JIM51">
+<meta property="og:url" content="https://jim51.github.io/categories/Office/index.html">
 <meta property="og:site_name" content="JIM51">
-<meta property="og:description" content="Windows 7之後遠登入支援network level authentication(NLA)的協定，它的動作是去驗證憑證是否正常。在大多數的RDP都比較少用這個功能，但是當在網路斷線情況下卻會讓連到遠端電腦的動這個動作變的超慢。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://jim51.github.io/images/x009.jpg">
-<meta property="og:updated_time" content="2018-04-25T02:38:50.247Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="網路斷線情況下遠端(RDP)登入緩慢">
-<meta name="twitter:description" content="Windows 7之後遠登入支援network level authentication(NLA)的協定，它的動作是去驗證憑證是否正常。在大多數的RDP都比較少用這個功能，但是當在網路斷線情況下卻會讓連到遠端電腦的動這個動作變的超慢。">
-<meta name="twitter:image" content="https://jim51.github.io/images/x009.jpg">
+<meta name="twitter:title" content="JIM51">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -116,72 +109,55 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        <article id="post-remote-desktop-delay-connestions"
-  class="post white-box article-type-post"
-  itemscope itemprop="blogPost">
-	<section class='meta'>
-	<h2 class="title">
-  	<a href="/2018/04/25/remote-desktop-delay-connestions/">
-    	網路斷線情況下遠端(RDP)登入緩慢
-    </a>
-  </h2>
-	<time>
-	  Apr 25, 2018
-	</time>
+        
+  <script>
+    window.subData= { title:'Category : Office'}
+  </script>
+
+<section class="post-list">
 	
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2018/04/26/office-2016-dark-theme/">
+        Office 2016 黑色主題
+      </a>
+    </h2>
+    
+    <time>
+      Apr 26, 2018
+    </time>
+		
     
     <div class='cats'>
-        <a href="/categories/Windows/">Windows</a>
+        <a href="/categories/Office/">Office</a>
     </div>
 
-	</section>
-	
-		<section class="toc-wrapper"></section>
-	
-	<section class="article typo">
-  	<div class="article-entry" itemprop="articleBody">
-    	<p>Windows 7之後遠登入支援network level authentication(NLA)的協定，它的動作是去驗證憑證是否正常。<br>在大多數的RDP都比較少用這個功能，但是當在網路斷線情況下卻會讓連到遠端電腦的動這個動作變的超慢。<br><a id="more"></a><br>因為每次連線時都都需要檢查根憑證，未連網情況下會等到Time out才會繼續下一個動作。<br>如果要讓速度快一點其實可以在用戶端的群組原則裡修正裡修改不要檢查根憑證，這樣就可以避免這個問題。<br>在命令提示字元或執行裡叫出群組原則編輯器</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpedit.msc</span><br></pre></td></tr></table></figure>
-<p>在視窗裡找到</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">電腦設定 &gt; 系統管理範本 &gt; 系統 &gt; 網際網路通訊管理 &gt; 網際網路通訊設定</span><br></pre></td></tr></table></figure>
-<p>找到設定”關閉根憑證自動更新”將他設定為啟用，再連線時速度就恢復了。<br><img src="/images/x009.jpg" alt="關閉根憑證自動更新"></p>
+  </section>
+  <section class="article typo">
+	  <p>Office 2010時有個背景主題是黑色，後來到Office 2016一開始還沒有，在2016/01月時，加入了黑色主題。<br>
 
-  	</div>
-	  
-	  <div class="article-tags tags">
+    
+	  <div class="readmore">
+      <a href="/2018/04/26/office-2016-dark-theme/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
       
-        <a href="/tags/Windows/">Windows</a>
+        <a href="/tags/Office/">Office</a>
       
 	  </div>
     
-		
-	
-		<div class="art-item-footer">
-				
-					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2018/04/25/hexo-google-analytics/" rel="prev"  title="Hexo裡新增Google analticts追蹤碼">
-						Hexo裡新增Google analticts追蹤碼 
-					</a></span>
-				
-				
-					<span class="art-item-right">next：<a href="/2018/04/24/sql-repeat-delete/" rel="next"  title="SQL 刪除重複資料">
-						SQL 刪除重複資料
-					</a><i class="icon icon-chevron-thin-right"></i></span>
-				
-		</div>
-	
-	</section>
-	
-		<section id="comments">
-			<div id="disqus_thread"></div>
-		</section>
-	
+  </section>
 </article>
-<script>
-	window.subData = {
-		title: '網路斷線情況下遠端(RDP)登入緩慢',
-		tools: true
-	}
-</script>
+    </div>
+  
+</section>
+
 
       </div>
       <aside class='l_side'>
@@ -256,13 +232,11 @@
 <script>
   var disqus_shortname = 'jim51blog';
   
-  var disqus_url = 'https://jim51.github.io/2018/04/25/remote-desktop-delay-connestions/';
-  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
