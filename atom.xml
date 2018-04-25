@@ -43,9 +43,9 @@
     <link href="https://jim51.github.io/2018/04/25/remote-desktop-delay-connestions/"/>
     <id>https://jim51.github.io/2018/04/25/remote-desktop-delay-connestions/</id>
     <published>2018-04-25T00:57:02.000Z</published>
-    <updated>2018-04-25T01:44:12.141Z</updated>
+    <updated>2018-04-25T02:38:50.247Z</updated>
     
-    <content type="html"><![CDATA[<p>Windows 7之後遠登入支援network level authentication(NLA)的協定，它的動作是去驗證憑證是否正常。<br>在大多數的RDP都比較少用這個功能，但是當在網路斷線情況下卻會讓連到遠端電腦的動這個動作變的超慢。<br><a id="more"></a><br>因為每次連線時都都需要檢查根憑證，未連網情況下會等到Time out才會繼續下一個動作。<br>如果要讓速度快一點其實可以在用戶端的群組原則裡修正裡修改不要使用NLA，這樣就可以避免這個問題。<br>在命令提示字元或執行裡叫出群組原則編輯器</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpedit.msc</span><br></pre></td></tr></table></figure><p>在視窗裡找到</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">電腦設定 &gt; 系統管理範本 &gt; 系統 &gt; 網際網路通訊管理 &gt; 網際網路通訊設定</span><br></pre></td></tr></table></figure><p>找到設定”關閉根憑證自動更新”將他設定為啟用，再連線時速度就恢復了。<br><img src="/images/x009.jpg" alt="關閉根憑證自動更新"></p>]]></content>
+    <content type="html"><![CDATA[<p>Windows 7之後遠登入支援network level authentication(NLA)的協定，它的動作是去驗證憑證是否正常。<br>在大多數的RDP都比較少用這個功能，但是當在網路斷線情況下卻會讓連到遠端電腦的動這個動作變的超慢。<br><a id="more"></a><br>因為每次連線時都都需要檢查根憑證，未連網情況下會等到Time out才會繼續下一個動作。<br>如果要讓速度快一點其實可以在用戶端的群組原則裡修正裡修改不要檢查根憑證，這樣就可以避免這個問題。<br>在命令提示字元或執行裡叫出群組原則編輯器</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gpedit.msc</span><br></pre></td></tr></table></figure><p>在視窗裡找到</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">電腦設定 &gt; 系統管理範本 &gt; 系統 &gt; 網際網路通訊管理 &gt; 網際網路通訊設定</span><br></pre></td></tr></table></figure><p>找到設定”關閉根憑證自動更新”將他設定為啟用，再連線時速度就恢復了。<br><img src="/images/x009.jpg" alt="關閉根憑證自動更新"></p>]]></content>
     
     <summary type="html">
     
