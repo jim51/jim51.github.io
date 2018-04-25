@@ -9,7 +9,7 @@
   <meta name="keywords" content="" />
   <meta name="HandheldFriendly" content="True" />
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <link rel="shortcut icon" href="/">
+  <link rel="shortcut icon" href="/images/favicon.png">
   <link rel="alternate" href="/atom.xml" title="JIM51">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="有時整理SQL資料時需要刪除重覆資料，在這裡做個筆記。 12345678set rowcount 1WHILE 1=1begin  delete from table where id in(select id from table group by id having count(*)&amp;gt;1)  if @@rowcount=0     breakendset rowcount 0">
