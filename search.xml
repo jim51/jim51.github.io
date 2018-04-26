@@ -6,7 +6,7 @@
       <title>Office 2016 黑色主題</title>
       <link href="/2018/04/26/office-2016-dark-theme/"/>
       <url>/2018/04/26/office-2016-dark-theme/</url>
-      <content type="html"><![CDATA[<p>Office 2010時有個背景主題是黑色，後來到Office 2016一開始還沒有，在2016/01月時，加入了黑色主題。<br><a id="more"></a><br>好景不常後面某一次更新時2016的黑色主題就沒了，但Office 365一直都有黑色主題，只能說微軟想做一個小小的產品區隔。  </p><p>現在就來說明如何用降版方式取得想要的黑色主題<br>首先開啟命令提示字元切換到執行目錄</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> "C:\Program Files\Common Files\microsoft shared\ClickToRun"</span><br></pre></td></tr></table></figure><p>執行降版或升版到需要版本</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">OfficeC2RClient.exe /update user updatetoversion=<span class="number">16</span>.<span class="number">0</span>.<span class="number">6568</span>.<span class="number">2034</span></span><br></pre></td></tr></table></figure><p>這時會跳一個視窗出現正在下載Office更新<br><img src="/images/x013.jpg" alt="更新Office"><br>！！<br>更新完後視窗會直接不見，此時重新開啟Office，黑色主題重新出現。<br><img src="/images/x014.jpg" alt="可選黑色主題"></p><p>還有一個很重要的步驟，把自動更新關掉。<br><img src="/images/x015.jpg" alt="關閉Office更新"></p>]]></content>
+      <content type="html"><![CDATA[<p>Office 2010時有個背景主題是黑色，後來到Office 2016一開始還沒有，在2016/01月時，加入了黑色主題。<br><a id="more"></a><br>好景不常後面某一次更新時2016的黑色主題就沒了，但Office 365一直都有黑色主題，只能說微軟想做一個小小的產品區隔。<br>現在就來說明如何用降版方式取得想要的黑色主題<br>首先開啟命令提示字元切換到執行目錄</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> "C:\Program Files\Common Files\microsoft shared\ClickToRun"</span><br></pre></td></tr></table></figure><p>執行降版或升版到需要版本</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">OfficeC2RClient.exe /update user updatetoversion=<span class="number">16</span>.<span class="number">0</span>.<span class="number">6568</span>.<span class="number">2034</span></span><br></pre></td></tr></table></figure><p>這時會跳一個視窗出現正在下載Office更新<br><img src="/images/x013.jpg" alt="更新Office"><br>！！<br>更新完後視窗會直接不見，此時重新開啟Office，黑色主題重新出現。<br><img src="/images/x014.jpg" alt="可選黑色主題"></p><p>還有一個很重要的步驟，把自動更新關掉。<br><img src="/images/x015.jpg" alt="關閉Office更新"></p>]]></content>
       
       <categories>
           
@@ -18,27 +18,6 @@
         <tags>
             
             <tag> Office </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    <entry>
-      <title>Hexo裡新增Google analticts追蹤碼</title>
-      <link href="/2018/04/25/hexo-google-analytics/"/>
-      <url>/2018/04/25/hexo-google-analytics/</url>
-      <content type="html"><![CDATA[<p>Hexo網站架起來後，想看看網站流量如何、有沒有人看最簡單的方式，就是加入Google Analytics追蹤網站流量。<br>它的功能非常強大同時也是免費的，立馬加入它吧。<br><a id="more"></a></p><h1 id="申請帳號"><a href="#申請帳號" class="headerlink" title="申請帳號"></a>申請帳號</h1><p>要加入Google Analytics一定要申請Google帳號(我想大家都有吧)，然後去<a href="https://analytics.google.com" target="_blank" rel="noopener">Google Analtics</a><br>登入申請，填入相關資料最下面有個[取得追蹤ID]<br><img src="/images/x010.jpg" alt="google 申請"><br>取得追蹤ID後，會出現一個視窗提示你要輸入的程式嗎，請把他全選後複雜。<br><img src="/images/x011.jpg" alt="取得ID"></p><h1 id="加到Hexo網站"><a href="#加到Hexo網站" class="headerlink" title="加到Hexo網站"></a>加到Hexo網站</h1><p>以我用的這個Theme為例，在</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme \ material-flow \layout \ _partial \ footer.ejs</span><br></pre></td></tr></table></figure><p>裡加入Google analytics程式碼，然後去Google analtics後台驗證看看是否成功(記得要Deploy)。(在報表/即時)<br><img src="/images/x012.jpg" alt="確認畫面"><br>太棒了，看到了。</p><p>如果沒看到也別灰心，確認看看你的瀏覽器有沒有設定阻擋廣告外掛，<br>大部份的spam blocker都會阻擋這類的程式碼，把它關掉再試看看吧。</p>]]></content>
-      
-      <categories>
-          
-          <category> Hexo </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Hexo </tag>
             
         </tags>
       
