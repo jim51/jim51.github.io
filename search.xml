@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>Windows 10 Home 升級 Pro序號不符</title>
+      <link href="/2018/04/27/windows-10-home-upgrade/"/>
+      <url>/2018/04/27/windows-10-home-upgrade/</url>
+      <content type="html"><![CDATA[<p>從Windows 10 Home要升級至Windows 10 Pro買了序號輸入，Windows 卻回應【運作版本與序號不相符】時，該怎麼辦呢?<br>微軟提供了下面序號可以從Windows Home升級到Pro後再輸入新序號註冊，但Windows版本必需是1511後的版本。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VK7JG-NPHTM-C97JM-9MPGT-3V66T</span><br></pre></td></tr></table></figure>]]></content>
+      
+      <categories>
+          
+          <category> Windows </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Windows </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>Office 2016 黑色主題</title>
       <link href="/2018/04/26/office-2016-dark-theme/"/>
       <url>/2018/04/26/office-2016-dark-theme/</url>
