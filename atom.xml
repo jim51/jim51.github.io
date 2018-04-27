@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jim51.github.io/"/>
-  <updated>2018-04-27T03:16:46.514Z</updated>
+  <updated>2018-04-27T23:41:45.750Z</updated>
   <id>https://jim51.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如在Windows系統確認主機版型號(不拆機殼)</title>
+    <link href="https://jim51.github.io/2018/04/28/how-to-check-your-motherboard-model-number/"/>
+    <id>https://jim51.github.io/2018/04/28/how-to-check-your-motherboard-model-number/</id>
+    <published>2018-04-27T23:41:45.000Z</published>
+    <updated>2018-04-27T23:41:45.750Z</updated>
+    
+    <content type="html"><![CDATA[<p>IT工作難免會遇到需要確認硬體，可能是維修、換零件需要確認主機板型號時，折機是最快的。<br>但有時主機可能不好搬動或是<del>懶</del>其他原因不想拆機殼時要怎麼確認主機板型號呢?<br><a id="more"></a></p><h1 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h1><p>通常可以用下面的方法，在執行輸入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dxdiag.exe</span><br></pre></td></tr></table></figure><p>在【系統】裡的【系統型號】通常可以顯示<br><img src="/images/x025.jpg" alt="dxdiag">  </p><p>但有些OEM的機器，用dxdiag卻無法看到型號出現像下面這張圖<br><img src="/images/x026.jpg" alt="dxdiag"><br>難不成是一定要拆機嗎??</p><h1 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h1><p>身為一個<del>懶</del>聰明的IT，當然還是要找方法解決的。<br>打開萬能的命令提示字元輸入下面的指令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wmic baseboard get product,Manufacturer,version,serialnumber</span><br></pre></td></tr></table></figure><p>型號出現了<br><img src="/images/x027.jpg" alt="wmic"></p><h1 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h1><p>當然除了上面二種方法外，還可以裝軟體<a href="https://www.ccleaner.com/speccy" target="_blank" rel="noopener">Speccy</a>。<br><a href="https://www.ccleaner.com/speccy" target="_blank" rel="noopener">Speccy</a>有提供免費版本需要也是可以參考看看。<br><img src="https://s1.pir.fm/pf/sp/sp-screen.png" alt="Speccy"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;IT工作難免會遇到需要確認硬體，可能是維修、換零件需要確認主機板型號時，折機是最快的。&lt;br&gt;但有時主機可能不好搬動或是&lt;del&gt;懶&lt;/del&gt;其他原因不想拆機殼時要怎麼確認主機板型號呢?&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Windows" scheme="https://jim51.github.io/categories/Windows/"/>
+    
+    
+      <category term="Windows" scheme="https://jim51.github.io/tags/Windows/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows 10 Home 升級 Pro序號不符</title>

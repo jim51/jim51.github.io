@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Category: TSQL | JIM51</title>
+  <title>如在Windows系統確認主機版型號(不拆機殼) | JIM51</title>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
   <meta name="HandheldFriendly" content="True" />
@@ -12,13 +12,23 @@
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="JIM51">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="JIM51">
-<meta property="og:url" content="https://jim51.github.io/categories/TSQL/index.html">
+  <meta name="description" content="IT工作難免會遇到需要確認硬體，可能是維修、換零件需要確認主機板型號時，折機是最快的。但有時主機可能不好搬動或是懶其他原因不想拆機殼時要怎麼確認主機板型號呢?">
+<meta name="keywords" content="Windows">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如在Windows系統確認主機版型號(不拆機殼)">
+<meta property="og:url" content="https://jim51.github.io/2018/04/28/how-to-check-your-motherboard-model-number/index.html">
 <meta property="og:site_name" content="JIM51">
+<meta property="og:description" content="IT工作難免會遇到需要確認硬體，可能是維修、換零件需要確認主機板型號時，折機是最快的。但有時主機可能不好搬動或是懶其他原因不想拆機殼時要怎麼確認主機板型號呢?">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://jim51.github.io/images/x025.jpg">
+<meta property="og:image" content="https://jim51.github.io/images/x026.jpg">
+<meta property="og:image" content="https://jim51.github.io/images/x027.jpg">
+<meta property="og:image" content="https://s1.pir.fm/pf/sp/sp-screen.png">
+<meta property="og:updated_time" content="2018-04-27T23:41:45.750Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JIM51">
+<meta name="twitter:title" content="如在Windows系統確認主機版型號(不拆機殼)">
+<meta name="twitter:description" content="IT工作難免會遇到需要確認硬體，可能是維修、換零件需要確認主機板型號時，折機是最快的。但有時主機可能不好搬動或是懶其他原因不想拆機殼時要怎麼確認主機板型號呢?">
+<meta name="twitter:image" content="https://jim51.github.io/images/x025.jpg">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -117,52 +127,72 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        
-  <script>
-    window.subData= { title:'Category : TSQL'}
-  </script>
-
-<section class="post-list">
+        <article id="post-how-to-check-your-motherboard-model-number"
+  class="post white-box article-type-post"
+  itemscope itemprop="blogPost">
+	<section class='meta'>
+	<h2 class="title">
+  	<a href="/2018/04/28/how-to-check-your-motherboard-model-number/">
+    	如在Windows系統確認主機版型號(不拆機殼)
+    </a>
+  </h2>
+	<time>
+	  Apr 28, 2018
+	</time>
 	
-    <div class='post-wrapper'>
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/04/24/sql-repeat-delete/">
-        SQL 刪除重複資料
-      </a>
-    </h2>
-    
-    <time>
-      Apr 24, 2018
-    </time>
-		
     
     <div class='cats'>
-        <a href="/categories/TSQL/">TSQL</a>
+        <a href="/categories/Windows/">Windows</a>
     </div>
 
-  </section>
-  <section class="article typo">
-	  <p>有時整理SQL資料時需要刪除重覆資料，在這裡做個筆記。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> rowcount <span class="number">1</span></span><br><span class="line"><span class="keyword">WHILE</span> <span class="number">1</span>=<span class="number">1</span></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">  <span class="keyword">delete</span> <span class="keyword">from</span> <span class="keyword">table</span> <span class="keyword">where</span> <span class="keyword">id</span> <span class="keyword">in</span>(<span class="keyword">select</span> <span class="keyword">id</span> <span class="keyword">from</span> <span class="keyword">table</span> <span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">id</span> <span class="keyword">having</span> <span class="keyword">count</span>(*)&gt;<span class="number">1</span>)</span><br><span class="line">  <span class="keyword">if</span> @@rowcount=<span class="number">0</span></span><br><span class="line">     break</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">set</span> rowcount <span class="number">0</span></span><br></pre></td></tr></table></figure>
+	</section>
+	
+		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#方法一"><span class="toc-number">1.</span> <span class="toc-text">方法一</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#方法二"><span class="toc-number">2.</span> <span class="toc-text">方法二</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#方法三"><span class="toc-number">3.</span> <span class="toc-text">方法三</span></a></li></ol></section>
+	
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<p>IT工作難免會遇到需要確認硬體，可能是維修、換零件需要確認主機板型號時，折機是最快的。<br>但有時主機可能不好搬動或是<del>懶</del>其他原因不想拆機殼時要怎麼確認主機板型號呢?<br><a id="more"></a></p>
+<h1 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h1><p>通常可以用下面的方法，在執行輸入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dxdiag.exe</span><br></pre></td></tr></table></figure>
+<p>在【系統】裡的【系統型號】通常可以顯示<br><img src="/images/x025.jpg" alt="dxdiag">  </p>
+<p>但有些OEM的機器，用dxdiag卻無法看到型號出現像下面這張圖<br><img src="/images/x026.jpg" alt="dxdiag"><br>難不成是一定要拆機嗎??</p>
+<h1 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h1><p>身為一個<del>懶</del>聰明的IT，當然還是要找方法解決的。<br>打開萬能的命令提示字元輸入下面的指令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wmic baseboard get product,Manufacturer,version,serialnumber</span><br></pre></td></tr></table></figure>
+<p>型號出現了<br><img src="/images/x027.jpg" alt="wmic"></p>
+<h1 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h1><p>當然除了上面二種方法外，還可以裝軟體<a href="https://www.ccleaner.com/speccy" target="_blank" rel="noopener">Speccy</a>。<br><a href="https://www.ccleaner.com/speccy" target="_blank" rel="noopener">Speccy</a>有提供免費版本需要也是可以參考看看。<br><img src="https://s1.pir.fm/pf/sp/sp-screen.png" alt="Speccy"></p>
 
-    
-    
-    
-	  <div class="full-width auto-padding tags">
+  	</div>
+	  
+	  <div class="article-tags tags">
       
-        <a href="/tags/TSQL/">TSQL</a>
+        <a href="/tags/Windows/">Windows</a>
       
 	  </div>
     
-  </section>
+		
+	
+		<div class="art-item-footer">
+				
+				
+					<span class="art-item-right">next：<a href="/2018/04/27/windows-10-home-upgrade/" rel="next"  title="Windows 10 Home 升級 Pro序號不符">
+						Windows 10 Home 升級 Pro序號不符
+					</a><i class="icon icon-chevron-thin-right"></i></span>
+				
+		</div>
+	
+	</section>
+	
+		<section id="comments">
+			<div id="disqus_thread"></div>
+		</section>
+	
 </article>
-    </div>
-  
-</section>
-
+<script>
+	window.subData = {
+		title: '如在Windows系統確認主機版型號(不拆機殼)',
+		tools: true
+	}
+</script>
 
       </div>
       <aside class='l_side'>
@@ -230,11 +260,13 @@
 <script>
   var disqus_shortname = 'jim51blog';
   
+  var disqus_url = 'https://jim51.github.io/2018/04/28/how-to-check-your-motherboard-model-number/';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
