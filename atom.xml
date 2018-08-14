@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jim51.github.io/"/>
-  <updated>2018-04-27T23:41:45.750Z</updated>
+  <updated>2018-08-14T03:50:28.876Z</updated>
   <id>https://jim51.github.io/</id>
   
   <author>
@@ -15,6 +15,50 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo增加留言版功能-Disqus</title>
+    <link href="https://jim51.github.io/2018/08/14/hexo-comments-disqus/"/>
+    <id>https://jim51.github.io/2018/08/14/hexo-comments-disqus/</id>
+    <published>2018-08-14T03:50:28.000Z</published>
+    <updated>2018-08-14T03:50:28.876Z</updated>
+    
+    <content type="html"><![CDATA[<p>Blog互動功能是非常必要的，尤其大部份Blog每篇文章下面都很常出現的一個留這版就是Disqus。<br>現在來說明如何新增這個功能到Hexo。<br><a id="more"></a></p><h1 id="申請Disqus留言版"><a href="#申請Disqus留言版" class="headerlink" title="申請Disqus留言版"></a>申請Disqus留言版</h1><p>這個動作我想是本篇主題最複雜的一步。</p><h2 id="申請Disqus登入帳號"><a href="#申請Disqus登入帳號" class="headerlink" title="申請Disqus登入帳號"></a>申請Disqus登入帳號</h2><p>只要填入帳號、Email、密碼就可以注冊帳號。如果想用Google、Facebook或是Twitter也可以。<br><img src="/images/x016.jpg" alt="註冊"></p><h2 id="申請網站留言版帳號"><a href="#申請網站留言版帳號" class="headerlink" title="申請網站留言版帳號"></a>申請網站留言版帳號</h2><p>在右上方的齒輪點下去，有個[Add Disque to stie]<br><img src="/images/x017.jpg" alt="Add Disque to stie"></p><p>第二個畫面拉到最下面點選[GET STARTED]<br><img src="/images/x018.jpg" alt="GET STARTED"></p><p>第三個畫面:選擇[I wate to install Disqus on my site]<br><img src="/images/x019.jpg" alt="I wate to install Disqus on my site"></p><p>第四個畫面:設定你Site的相關設定，包含設定Website Name，如果這裡與別人的別名重複會出現<br>[name]-1<br><img src="/images/x020.jpg" alt="Website Name"></p><p>第五個畫面:設定付費，先用免費的有需要可以升級<br><img src="/images/x021.jpg" alt="設定付費"></p><p>第六個畫面:選擇設定的網站或系統<br>因為裡面沒有Hexo可以選擇，所以我們拉到最下面選[Install manually with Universal Code]<br><img src="/images/x022.jpg" alt="Install manually with Universal Code"></p><p>第七個畫面:這裡提示你直接使用的碼，但我使用的Theme有支援所以這步完略過就可以了。<br><img src="/images/x023.jpg" alt="略過"></p><p>其實重點在取得shortname，一般來說shortname是剛設定的Website Name，但如果不確定的話可以參考<a href="https://help.disqus.com/installation/whats-a-shortname" target="_blank" rel="noopener">官方說明</a></p><h1 id="新增Disuqs設定至Hexo"><a href="#新增Disuqs設定至Hexo" class="headerlink" title="新增Disuqs設定至Hexo"></a>新增Disuqs設定至Hexo</h1><p>拿到shortname後，到Hexo的設定檔[_config.yml]增加下面的設定，如果Theme有支援發佈後馬上可以看到每個Post下面都會出現Dusqus的發佈欄囉。</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Comments</span></span><br><span class="line"><span class="attr">disqus_shortname:</span> <span class="string">jim51blog</span></span><br></pre></td></tr></table></figure><p><img src="/images/x024.jpg" alt="發佈欄"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Blog互動功能是非常必要的，尤其大部份Blog每篇文章下面都很常出現的一個留這版就是Disqus。&lt;br&gt;現在來說明如何新增這個功能到Hexo。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Hexo" scheme="https://jim51.github.io/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="https://jim51.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo裡新增Google analticts追蹤碼</title>
+    <link href="https://jim51.github.io/2018/08/14/hexo-google-analytics/"/>
+    <id>https://jim51.github.io/2018/08/14/hexo-google-analytics/</id>
+    <published>2018-08-14T03:47:55.000Z</published>
+    <updated>2018-08-14T03:47:55.897Z</updated>
+    
+    <content type="html"><![CDATA[<p>Hexo網站架起來後，想看看網站流量如何、有沒有人看最簡單的方式，就是加入Google Analytics追蹤網站流量。<br>它的功能非常強大同時也是免費的，立馬加入它吧。<br><a id="more"></a></p><h1 id="申請帳號"><a href="#申請帳號" class="headerlink" title="申請帳號"></a>申請帳號</h1><p>要加入Google Analytics一定要申請Google帳號(我想大家都有吧)，然後去<a href="https://analytics.google.com" target="_blank" rel="noopener">Google Analtics</a><br>登入申請，填入相關資料最下面有個[取得追蹤ID]<br><img src="/images/x010.jpg" alt="google 申請"><br>取得追蹤ID後，會出現一個視窗提示你要輸入的程式嗎，請把他全選後複雜。<br><img src="/images/x011.jpg" alt="取得ID"></p><h1 id="加到Hexo網站"><a href="#加到Hexo網站" class="headerlink" title="加到Hexo網站"></a>加到Hexo網站</h1><p>以我用的這個Theme為例，在</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme \ material-flow \layout \ _partial \ footer.ejs</span><br></pre></td></tr></table></figure><p>裡加入Google analytics程式碼，然後去Google analtics後台驗證看看是否成功(記得要Deploy)。(在報表/即時)<br><img src="/images/x012.jpg" alt="確認畫面"><br>太棒了，看到了。</p><p>如果沒看到也別灰心，確認看看你的瀏覽器有沒有設定阻擋廣告外掛，<br>大部份的spam blocker都會阻擋這類的程式碼，把它關掉再試看看吧。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Hexo網站架起來後，想看看網站流量如何、有沒有人看最簡單的方式，就是加入Google Analytics追蹤網站流量。&lt;br&gt;它的功能非常強大同時也是免費的，立馬加入它吧。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Hexo" scheme="https://jim51.github.io/categories/Hexo/"/>
+    
+    
+      <category term="Hexo" scheme="https://jim51.github.io/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>如在Windows系統確認主機版型號(不拆機殼)</title>
