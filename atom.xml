@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jim51.github.io/"/>
-  <updated>2018-08-14T03:50:28.876Z</updated>
+  <updated>2018-08-14T06:39:32.026Z</updated>
   <id>https://jim51.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Woocommerce Checkout 自動提示錯誤訊息</title>
+    <link href="https://jim51.github.io/2018/08/14/woocommerce-checkout-auto-scoll-error-message/"/>
+    <id>https://jim51.github.io/2018/08/14/woocommerce-checkout-auto-scoll-error-message/</id>
+    <published>2018-08-14T05:06:42.000Z</published>
+    <updated>2018-08-14T06:39:32.026Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近做一個Wordpress及Woocommerce的專案用了個<a href="https://themeforest.net/item/depot-a-contemporary-theme-for-ecommerce/19536103" target="_blank" rel="noopener">付費的Theme</a><br>大部份沒什麼太大問題的，但是這個版本的Theme與Woocommerce有一個Checkout相容的問題<br><a id="more"></a><br>當一般使用Woocommerce時，在Checkout的地方如果欄位有沒填寫的必填欄位面會自動移至上面提示哪些欄位是沒填到的，像下面這個操作。  </p><video src="/images/2018-08-14_00-08-44.mp4" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;" poster=" " autoplay="autoplay"></video><p>但是裝了這個Theme，再匯入Demo資料後，就失效了</p><video src="/images/2018-08-13_23-15-57.mp4" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;" poster=" " autoplay="autoplay"></video><p>經過一番Debug後，確認是Jqury的套件相容性問題。<br>小弟對Wordpress並<del>不會</del>沒那麼熟悉，還沒辦法自己寫外掛修正，只好<del>土法煉鋼</del>直接改原始碼。<br>修正的原始碼路徑在這個檔案裡，由於是壓縮過的檔案，修改要特別的小心。  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js</span><br></pre></td></tr></table></figure><p>將這段程式碼</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">o[0].scrollIntoView(&#123;behavior:&quot;smooth&quot;,block:&quot;center&quot;&#125;)</span><br></pre></td></tr></table></figure><p>取代為這段</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">i(&quot;html, body&quot;).animate(&#123;scrollTop:o.offset().top-100&#125;,1e3)</span><br></pre></td></tr></table></figure><p>這樣就可解決這個Bug了。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近做一個Wordpress及Woocommerce的專案用了個&lt;a href=&quot;https://themeforest.net/item/depot-a-contemporary-theme-for-ecommerce/19536103&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;付費的Theme&lt;/a&gt;&lt;br&gt;大部份沒什麼太大問題的，但是這個版本的Theme與Woocommerce有一個Checkout相容的問題&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Wordpress" scheme="https://jim51.github.io/categories/Wordpress/"/>
+    
+      <category term="Woocommerce" scheme="https://jim51.github.io/categories/Wordpress/Woocommerce/"/>
+    
+    
+      <category term="Wordpress,Woocommerce" scheme="https://jim51.github.io/tags/Wordpress-Woocommerce/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo增加留言版功能-Disqus</title>

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Hexo 簡介+架設 | JIM51</title>
+  <title>Woocommerce Checkout 自動提示錯誤訊息 | JIM51</title>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
   <meta name="HandheldFriendly" content="True" />
@@ -12,23 +12,18 @@
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="JIM51">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本Blog是由Hexo架設而成的，想介紹一下這個超棒的Blog框架便把第一篇文章給了它。">
-<meta name="keywords" content="Hexo">
+  <meta name="description" content="最近做一個Wordpress及Woocommerce的專案用了個付費的Theme大部份沒什麼太大問題的，但是這個版本的Theme與Woocommerce有一個Checkout相容的問題">
+<meta name="keywords" content="Wordpress,Woocommerce">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo 簡介+架設">
-<meta property="og:url" content="https://jim51.github.io/2018/04/22/hexo-init/index.html">
+<meta property="og:title" content="Woocommerce Checkout 自動提示錯誤訊息">
+<meta property="og:url" content="https://jim51.github.io/2018/08/14/woocommerce-checkout-auto-scoll-error-message/index.html">
 <meta property="og:site_name" content="JIM51">
-<meta property="og:description" content="本Blog是由Hexo架設而成的，想介紹一下這個超棒的Blog框架便把第一篇文章給了它。">
+<meta property="og:description" content="最近做一個Wordpress及Woocommerce的專案用了個付費的Theme大部份沒什麼太大問題的，但是這個版本的Theme與Woocommerce有一個Checkout相容的問題">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://jim51.github.io/images/x001.jpg">
-<meta property="og:image" content="https://jim51.github.io/images/x002.jpg">
-<meta property="og:image" content="https://jim51.github.io/images/x003.jpg">
-<meta property="og:image" content="https://jim51.github.io/images/x004.jpg">
-<meta property="og:updated_time" content="2018-04-23T05:40:06.255Z">
+<meta property="og:updated_time" content="2018-08-14T06:39:32.026Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo 簡介+架設">
-<meta name="twitter:description" content="本Blog是由Hexo架設而成的，想介紹一下這個超棒的Blog框架便把第一篇文章給了它。">
-<meta name="twitter:image" content="https://jim51.github.io/images/x001.jpg">
+<meta name="twitter:title" content="Woocommerce Checkout 自動提示錯誤訊息">
+<meta name="twitter:description" content="最近做一個Wordpress及Woocommerce的專案用了個付費的Theme大部份沒什麼太大問題的，但是這個版本的Theme與Woocommerce有一個Checkout相容的問題">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -127,58 +122,53 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        <article id="post-hexo-init"
+        <article id="post-woocommerce-checkout-auto-scoll-error-message"
   class="post white-box article-type-post"
   itemscope itemprop="blogPost">
 	<section class='meta'>
 	<h2 class="title">
-  	<a href="/2018/04/22/hexo-init/">
-    	Hexo 簡介+架設
+  	<a href="/2018/08/14/woocommerce-checkout-auto-scoll-error-message/">
+    	Woocommerce Checkout 自動提示錯誤訊息
     </a>
   </h2>
 	<time>
-	  Apr 22, 2018
+	  Aug 14, 2018
 	</time>
 	
     
     <div class='cats'>
-        <a href="/categories/Hexo/">Hexo</a>
+        <a href="/categories/Wordpress/">Wordpress</a>, <a href="/categories/Wordpress/Woocommerce/">Woocommerce</a>
     </div>
 
 	</section>
 	
-		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#什麼是-Hexo？"><span class="toc-number">1.</span> <span class="toc-text">什麼是 Hexo？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安裝"><span class="toc-number">2.</span> <span class="toc-text">安裝</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#安裝需求"><span class="toc-number">2.1.</span> <span class="toc-text">安裝需求</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Windows-Git"><span class="toc-number">2.2.</span> <span class="toc-text">Windows Git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Windows-Node-js"><span class="toc-number">2.3.</span> <span class="toc-text">Windows Node.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他平台-Git"><span class="toc-number">2.4.</span> <span class="toc-text">其他平台 Git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#其他平倉-Node-js"><span class="toc-number">2.5.</span> <span class="toc-text">其他平倉 Node.js</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安裝-Hexo"><span class="toc-number">2.6.</span> <span class="toc-text">安裝 Hexo</span></a></li></ol></li></ol></section>
+		<section class="toc-wrapper"></section>
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
-    	<p>本Blog是由Hexo架設而成的，想介紹一下這個超棒的Blog框架便把第一篇文章給了它。<br><a id="more"></a></p>
-<h1 id="什麼是-Hexo？"><a href="#什麼是-Hexo？" class="headerlink" title="什麼是 Hexo？"></a>什麼是 Hexo？</h1><p>先看看官方怎麼說</p>
-<blockquote>
-<p>Hexo 是一個快速、簡單且強大的網誌框架。Hexo 使用 Markdown（或其他渲染引擎）解析您的文章，並在幾秒鐘內，透過漂亮的主題產生靜態檔案。</p>
-</blockquote>
-<p>個人覺得Hexo是個很棒的Blog框架，速度非常快而且支援多種外掛，也能用來寫技術Blog，當然也合適來寫一般Blog(如果不怕學Makrdown的話…)。</p>
-<h1 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h1><h2 id="安裝需求"><a href="#安裝需求" class="headerlink" title="安裝需求"></a>安裝需求</h2><p>安裝Hexo非常的簡單，但最少還是需要二個軟體(可能你的電腦已經有安裝了)</p>
-<ul>
-<li><a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a></li>
-<li><a href="https://nodejs.org" target="_blank" rel="noopener">Node.js</a></li>
-</ul>
-<p>如果您的電腦剛好已經安裝過上面軟體，只要下npm指令即可完成Hexo安裝。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<p>如果還未安裝也沒有關係。</p>
-<h2 id="Windows-Git"><a href="#Windows-Git" class="headerlink" title="Windows Git"></a>Windows Git</h2><p><a href="https://git-scm.com/" target="_blank" rel="noopener">Git 官網</a><br>安裝時基本上都依據預設值就可以了，特別提醒安裝中這個預設值不要動到。<br>Use Git from the Windows command Prompt<br><img src="/images/x001.jpg" alt="git安裝畫面1"><br>這個動作會在系統加入Git的Path,後面在用cmd或powershell時才用Git指令執行。<br>安裝完成後，開啟cmd確認一下是否有安裝完成。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
-<p><img src="/images/x002.jpg" alt="git確認畫面"></p>
-<h2 id="Windows-Node-js"><a href="#Windows-Node-js" class="headerlink" title="Windows Node.js"></a>Windows Node.js</h2><p><a href="https://nodejs.org" target="_blank" rel="noopener">Node.js 官網</a><br>官網的Download for Windows (x64)下面會有二個版本LTS及Current。<br>這裡會比較建議選擇Current的版本，一般來說效能及功能都會比較強。<br><img src="/images/x003.jpg" alt="node.js 版本"><br>安裝的選項都照預設就可以了，等安裝完成執行版本確認。<br>沒問題就可以進行Hexo安裝了<br><img src="/images/x004.jpg" alt="確認node.js是否正常安裝"></p>
-<h2 id="其他平台-Git"><a href="#其他平台-Git" class="headerlink" title="其他平台 Git"></a>其他平台 Git</h2><p>Hexo 官方有提供其他平台的Git安裝說明，請至<br><a href="https://hexo.io/zh-tw/docs/#%E5%AE%89%E8%A3%9D-Git" target="_blank" rel="noopener">https://hexo.io/zh-tw/docs/#%E5%AE%89%E8%A3%9D-Git</a></p>
-<h2 id="其他平倉-Node-js"><a href="#其他平倉-Node-js" class="headerlink" title="其他平倉 Node.js"></a>其他平倉 Node.js</h2><p>Hexo 官方有提供其他平台的Node.js安裝說明，請至<br><a href="https://hexo.io/zh-tw/docs/#%E5%AE%89%E8%A3%9D-Node-js" target="_blank" rel="noopener">https://hexo.io/zh-tw/docs/#%E5%AE%89%E8%A3%9D-Node-js</a></p>
-<h2 id="安裝-Hexo"><a href="#安裝-Hexo" class="headerlink" title="安裝 Hexo"></a>安裝 Hexo</h2><p>當所有軟體都安裝完成後，透過npm安裝</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+    	<p>最近做一個Wordpress及Woocommerce的專案用了個<a href="https://themeforest.net/item/depot-a-contemporary-theme-for-ecommerce/19536103" target="_blank" rel="noopener">付費的Theme</a><br>大部份沒什麼太大問題的，但是這個版本的Theme與Woocommerce有一個Checkout相容的問題<br><a id="more"></a><br>當一般使用Woocommerce時，在Checkout的地方如果欄位有沒填寫的必填欄位面會自動移至上面提示哪些欄位是沒填到的，像下面這個操作。  </p>
+
+<video src="/images/2018-08-14_00-08-44.mp4" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;" poster=" " autoplay="autoplay">
+</video>
+
+<p>但是裝了這個Theme，再匯入Demo資料後，就失效了</p>
+
+<video src="/images/2018-08-13_23-15-57.mp4" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;" poster=" " autoplay="autoplay">
+</video>
+
+<p>經過一番Debug後，確認是Jqury的套件相容性問題。<br>小弟對Wordpress並<del>不會</del>沒那麼熟悉，還沒辦法自己寫外掛修正，只好<del>土法煉鋼</del>直接改原始碼。<br>修正的原始碼路徑在這個檔案裡，由於是壓縮過的檔案，修改要特別的小心。  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js</span><br></pre></td></tr></table></figure>
+<p>將這段程式碼</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">o[0].scrollIntoView(&#123;behavior:&quot;smooth&quot;,block:&quot;center&quot;&#125;)</span><br></pre></td></tr></table></figure>
+<p>取代為這段</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">i(&quot;html, body&quot;).animate(&#123;scrollTop:o.offset().top-100&#125;,1e3)</span><br></pre></td></tr></table></figure>
+<p>這樣就可解決這個Bug了。</p>
 
   	</div>
 	  
 	  <div class="article-tags tags">
       
-        <a href="/tags/Hexo/">Hexo</a>
+        <a href="/tags/Wordpress-Woocommerce/">Wordpress,Woocommerce</a>
       
 	  </div>
     
@@ -186,10 +176,10 @@
 	
 		<div class="art-item-footer">
 				
-					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2018/04/24/windows-accessing-credential-manager/" rel="prev"  title="Windows 內建的認證密碼管理">
-						Windows 內建的認證密碼管理 
-					</a></span>
 				
+					<span class="art-item-right">next：<a href="/2018/08/14/hexo-comments-disqus/" rel="next"  title="Hexo增加留言版功能-Disqus">
+						Hexo增加留言版功能-Disqus
+					</a><i class="icon icon-chevron-thin-right"></i></span>
 				
 		</div>
 	
@@ -202,7 +192,7 @@
 </article>
 <script>
 	window.subData = {
-		title: 'Hexo 簡介+架設',
+		title: 'Woocommerce Checkout 自動提示錯誤訊息',
 		tools: true
 	}
 </script>
@@ -279,7 +269,7 @@
 <script>
   var disqus_shortname = 'jim51blog';
   
-  var disqus_url = 'https://jim51.github.io/2018/04/22/hexo-init/';
+  var disqus_url = 'https://jim51.github.io/2018/08/14/woocommerce-checkout-auto-scoll-error-message/';
   
   (function(){
     var dsq = document.createElement('script');
