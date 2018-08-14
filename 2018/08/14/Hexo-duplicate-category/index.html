@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Hexo裡新增Google analticts追蹤碼 | JIM51</title>
+  <title>Hexo 出現重複或是已移除文章但數量0的Category | JIM51</title>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
   <meta name="HandheldFriendly" content="True" />
@@ -12,22 +12,21 @@
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="JIM51">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Hexo網站架起來後，想看看網站流量如何、有沒有人看最簡單的方式，就是加入Google Analytics追蹤網站流量。它的功能非常強大同時也是免費的，立馬加入它吧。">
+  <meta name="description" content="Hexo寫文章時有時手殘下錯Category，然後修正Category時會出現數量為0的Category。像下面這張圖      然後，它就一直在那裡了…不會消失。這時我們需要重整一下快取資料，用下面的指令 1Hexo clean 然後再重建就可以還我們清爽的Category囉。">
 <meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo裡新增Google analticts追蹤碼">
-<meta property="og:url" content="https://jim51.github.io/2018/04/25/hexo-google-analytics/index.html">
+<meta property="og:title" content="Hexo 出現重複或是已移除文章但數量0的Category">
+<meta property="og:url" content="https://jim51.github.io/2018/08/14/Hexo-duplicate-category/index.html">
 <meta property="og:site_name" content="JIM51">
-<meta property="og:description" content="Hexo網站架起來後，想看看網站流量如何、有沒有人看最簡單的方式，就是加入Google Analytics追蹤網站流量。它的功能非常強大同時也是免費的，立馬加入它吧。">
+<meta property="og:description" content="Hexo寫文章時有時手殘下錯Category，然後修正Category時會出現數量為0的Category。像下面這張圖      然後，它就一直在那裡了…不會消失。這時我們需要重整一下快取資料，用下面的指令 1Hexo clean 然後再重建就可以還我們清爽的Category囉。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://jim51.github.io/images/x010.jpg">
-<meta property="og:image" content="https://jim51.github.io/images/x011.jpg">
-<meta property="og:image" content="https://jim51.github.io/images/x012.jpg">
-<meta property="og:updated_time" content="2018-04-25T02:24:03.004Z">
+<meta property="og:image" content="https://jim51.github.io/images/2018-08-14_15-16-16.jpg">
+<meta property="og:image" content="https://jim51.github.io/images/2018-08-14_15-24-57.jpg">
+<meta property="og:updated_time" content="2018-08-14T07:26:03.437Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo裡新增Google analticts追蹤碼">
-<meta name="twitter:description" content="Hexo網站架起來後，想看看網站流量如何、有沒有人看最簡單的方式，就是加入Google Analytics追蹤網站流量。它的功能非常強大同時也是免費的，立馬加入它吧。">
-<meta name="twitter:image" content="https://jim51.github.io/images/x010.jpg">
+<meta name="twitter:title" content="Hexo 出現重複或是已移除文章但數量0的Category">
+<meta name="twitter:description" content="Hexo寫文章時有時手殘下錯Category，然後修正Category時會出現數量為0的Category。像下面這張圖      然後，它就一直在那裡了…不會消失。這時我們需要重整一下快取資料，用下面的指令 1Hexo clean 然後再重建就可以還我們清爽的Category囉。">
+<meta name="twitter:image" content="https://jim51.github.io/images/2018-08-14_15-16-16.jpg">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -126,17 +125,17 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        <article id="post-hexo-google-analytics"
+        <article id="post-Hexo-duplicate-category"
   class="post white-box article-type-post"
   itemscope itemprop="blogPost">
 	<section class='meta'>
 	<h2 class="title">
-  	<a href="/2018/04/25/hexo-google-analytics/">
-    	Hexo裡新增Google analticts追蹤碼
+  	<a href="/2018/08/14/Hexo-duplicate-category/">
+    	Hexo 出現重複或是已移除文章但數量0的Category
     </a>
   </h2>
 	<time>
-	  Apr 25, 2018
+	  Aug 14, 2018
 	</time>
 	
     
@@ -146,16 +145,16 @@
 
 	</section>
 	
-		<section class="toc-wrapper"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#申請帳號"><span class="toc-number">1.</span> <span class="toc-text">申請帳號</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#加到Hexo網站"><span class="toc-number">2.</span> <span class="toc-text">加到Hexo網站</span></a></li></ol></section>
+		<section class="toc-wrapper"></section>
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
-    	<p>Hexo網站架起來後，想看看網站流量如何、有沒有人看最簡單的方式，就是加入Google Analytics追蹤網站流量。<br>它的功能非常強大同時也是免費的，立馬加入它吧。<br><a id="more"></a></p>
-<h1 id="申請帳號"><a href="#申請帳號" class="headerlink" title="申請帳號"></a>申請帳號</h1><p>要加入Google Analytics一定要申請Google帳號(我想大家都有吧)，然後去<a href="https://analytics.google.com" target="_blank" rel="noopener">Google Analtics</a><br>登入申請，填入相關資料最下面有個[取得追蹤ID]<br><img src="/images/x010.jpg" alt="google 申請"><br>取得追蹤ID後，會出現一個視窗提示你要輸入的程式嗎，請把他全選後複雜。<br><img src="/images/x011.jpg" alt="取得ID"></p>
-<h1 id="加到Hexo網站"><a href="#加到Hexo網站" class="headerlink" title="加到Hexo網站"></a>加到Hexo網站</h1><p>以我用的這個Theme為例，在</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme \ material-flow \layout \ _partial \ footer.ejs</span><br></pre></td></tr></table></figure>
-<p>裡加入Google analytics程式碼，然後去Google analtics後台驗證看看是否成功(記得要Deploy)。(在報表/即時)<br><img src="/images/x012.jpg" alt="確認畫面"><br>太棒了，看到了。</p>
-<p>如果沒看到也別灰心，確認看看你的瀏覽器有沒有設定阻擋廣告外掛，<br>大部份的spam blocker都會阻擋這類的程式碼，把它關掉再試看看吧。</p>
+    	<p>Hexo寫文章時有時<del>手殘</del>下錯Category，然後修正Category時會出現數量為0的Category。<br>像下面這張圖  </p>
+<p><img src="/images/2018-08-14_15-16-16.jpg" alt="多餘的Caregory">  </p>
+<p>然後，它就一直在那裡了…不會消失。<br>這時我們需要重整一下快取資料，用下面的指令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hexo clean</span><br></pre></td></tr></table></figure>
+<p>然後再重建就可以還我們清爽的Category囉。</p>
+<p><img src="/images/2018-08-14_15-24-57.jpg" alt="多餘的Caregory">  </p>
 
   	</div>
 	  
@@ -169,13 +168,9 @@
 	
 		<div class="art-item-footer">
 				
-					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2018/04/26/office-2016-dark-theme/" rel="prev"  title="Office 2016 黑色主題">
-						Office 2016 黑色主題 
-					</a></span>
 				
-				
-					<span class="art-item-right">next：<a href="/2018/04/25/remote-desktop-delay-connestions/" rel="next"  title="網路斷線情況下遠端(RDP)登入緩慢">
-						網路斷線情況下遠端(RDP)登入緩慢
+					<span class="art-item-right">next：<a href="/2018/08/14/woocommerce-checkout-auto-scoll-error-message/" rel="next"  title="Woocommerce Checkout 自動提示錯誤訊息">
+						Woocommerce Checkout 自動提示錯誤訊息
 					</a><i class="icon icon-chevron-thin-right"></i></span>
 				
 		</div>
@@ -189,7 +184,7 @@
 </article>
 <script>
 	window.subData = {
-		title: 'Hexo裡新增Google analticts追蹤碼',
+		title: 'Hexo 出現重複或是已移除文章但數量0的Category',
 		tools: true
 	}
 </script>
@@ -203,13 +198,17 @@
     
     <ul class="entry">
     
-        <li><a class="flat-box" href="/categories/Hexo/"><div class='name'>Hexo</div><div class='badget'>2</div></a></li>
+        <li><a class="flat-box" href="/categories/Hexo/"><div class='name'>Hexo</div><div class='badget'>4</div></a></li>
     
         <li><a class="flat-box" href="/categories/Office/"><div class='name'>Office</div><div class='badget'>1</div></a></li>
     
         <li><a class="flat-box" href="/categories/TSQL/"><div class='name'>TSQL</div><div class='badget'>1</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Windows/"><div class='name'>Windows</div><div class='badget'>3</div></a></li>
+        <li><a class="flat-box" href="/categories/Windows/"><div class='name'>Windows</div><div class='badget'>5</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Wordpress/Woocommerce/"><div class='name'>Woocommerce</div><div class='badget'>1</div></a></li>
+    
+        <li><a class="flat-box" href="/categories/Wordpress/"><div class='name'>Wordpress</div><div class='badget'>1</div></a></li>
     
     </ul>
     
@@ -220,7 +219,7 @@
 <div class="m_widget tagcloud">
     <div class="header">Tags</div>
     <div class='content'>
-        <a href="/tags/Hexo/" style="font-size: 17px; color: #404040">Hexo</a> <a href="/tags/Office/" style="font-size: 14px; color: #808080">Office</a> <a href="/tags/TSQL/" style="font-size: 14px; color: #808080">TSQL</a> <a href="/tags/Windows/" style="font-size: 20px; color: #000">Windows</a>
+        <a href="/tags/Hexo/" style="font-size: 17px; color: #404040">Hexo</a> <a href="/tags/Office/" style="font-size: 14px; color: #808080">Office</a> <a href="/tags/TSQL/" style="font-size: 14px; color: #808080">TSQL</a> <a href="/tags/Windows/" style="font-size: 20px; color: #000">Windows</a> <a href="/tags/Wordpress-Woocommerce/" style="font-size: 14px; color: #808080">Wordpress,Woocommerce</a>
     </div>
 </div>
 
@@ -260,7 +259,7 @@
 <script>
   var disqus_shortname = 'jim51blog';
   
-  var disqus_url = 'https://jim51.github.io/2018/04/25/hexo-google-analytics/';
+  var disqus_url = 'https://jim51.github.io/2018/08/14/Hexo-duplicate-category/';
   
   (function(){
     var dsq = document.createElement('script');
