@@ -130,6 +130,43 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2018/04/24/sql-repeat-delete/">
+        SQL 刪除重複資料
+      </a>
+    </h2>
+    
+    <time>
+      Apr 24, 2018
+    </time>
+		
+    
+    <div class='cats'>
+        <a href="/categories/TSQL/">TSQL</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <p>有時整理SQL資料時需要刪除重覆資料，在這裡做個筆記。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> rowcount <span class="number">1</span></span><br><span class="line"><span class="keyword">WHILE</span> <span class="number">1</span>=<span class="number">1</span></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">  <span class="keyword">delete</span> <span class="keyword">from</span> <span class="keyword">table</span> <span class="keyword">where</span> <span class="keyword">id</span> <span class="keyword">in</span>(<span class="keyword">select</span> <span class="keyword">id</span> <span class="keyword">from</span> <span class="keyword">table</span> <span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">id</span> <span class="keyword">having</span> <span class="keyword">count</span>(*)&gt;<span class="number">1</span>)</span><br><span class="line">  <span class="keyword">if</span> @@rowcount=<span class="number">0</span></span><br><span class="line">     break</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">set</span> rowcount <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/TSQL/">TSQL</a>
+      
+	  </div>
+    
+  </section>
+</article>
+    </div>
+  
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2018/04/24/win10-rearm/">
         Windows 10 試用版 延長試用
       </a>
@@ -292,7 +329,7 @@
 <div class="m_widget tagcloud">
     <div class="header">Tags</div>
     <div class='content'>
-        <a href="/tags/Hexo/" style="font-size: 17px; color: #404040">Hexo</a> <a href="/tags/Office/" style="font-size: 14px; color: #808080">Office</a> <a href="/tags/TSQL/" style="font-size: 14px; color: #808080">TSQL</a> <a href="/tags/Tools/" style="font-size: 14px; color: #808080">Tools</a> <a href="/tags/Windows/" style="font-size: 20px; color: #000">Windows</a> <a href="/tags/Wordpress-Woocommerce/" style="font-size: 14px; color: #808080">Wordpress,Woocommerce</a>
+        <a href="/tags/Hexo/" style="font-size: 17px; color: #404040">Hexo</a> <a href="/tags/Kubernetes/" style="font-size: 14px; color: #808080">Kubernetes</a> <a href="/tags/Office/" style="font-size: 14px; color: #808080">Office</a> <a href="/tags/TSQL/" style="font-size: 14px; color: #808080">TSQL</a> <a href="/tags/Tools/" style="font-size: 14px; color: #808080">Tools</a> <a href="/tags/Windows/" style="font-size: 20px; color: #000">Windows</a> <a href="/tags/Wordpress-Woocommerce/" style="font-size: 14px; color: #808080">Wordpress,Woocommerce</a>
     </div>
 </div>
 

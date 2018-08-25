@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jim51.github.io/"/>
-  <updated>2018-08-25T09:42:25.269Z</updated>
+  <updated>2018-08-25T14:48:51.860Z</updated>
   <id>https://jim51.github.io/</id>
   
   <author>
@@ -17,17 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Kubernetes在Windows 10安裝手記</title>
+    <link href="https://jim51.github.io/2018/08/25/kubernetes-install/"/>
+    <id>https://jim51.github.io/2018/08/25/kubernetes-install/</id>
+    <published>2018-08-25T09:55:40.000Z</published>
+    <updated>2018-08-25T14:48:51.860Z</updated>
+    
+    <content type="html"><![CDATA[<p>Kubernetes是一個開源系統，用於跨多個主機管理容器化應用程序，為應用程序的部署，維護和擴展提供基本機制。<br>本篇著重在Windows的安裝部份。<br><a id="more"></a></p><h1 id="安裝Windows-10-Hyper-V"><a href="#安裝Windows-10-Hyper-V" class="headerlink" title="安裝Windows 10 Hyper-V"></a>安裝Windows 10 Hyper-V</h1><p>首先你一定要具備的就是Windows 10 Hyper-V，所以如果不是Pro版本的話就抱歉了。安裝詳情先參考<br><a href="https://docs.microsoft.com/zh-tw/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v" target="_blank" rel="noopener">在 Windows 10 上安裝 Hyper-V</a></p><h1 id="安裝Kubectl"><a href="#安裝Kubectl" class="headerlink" title="安裝Kubectl"></a>安裝Kubectl</h1><p>kubectl 是K8S的工具，安裝可以參考官網<br><a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-chocolatey-on-windows" target="_blank" rel="noopener">Kubectl install with Chocolatey on Windows</a></p><p>裡面提到<a href="/2018/08/25/chocolatey/">Chocolatey</a>套件，它的安裝方式可以參考<a href="/2018/08/25/chocolatey/">Chocolatey</a></p><p>裝好Chocolatey直接下安裝指令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">choco install kubernetes-cli</span><br></pre></td></tr></table></figure><p>安裝好後檢查一下版本</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl version</span><br></pre></td></tr></table></figure><p>看到這個畫面就沒問題了<br><img src="/images/2018-08-25_18-24-00.jpg" alt="kubectl安裝完成"></p><h1 id="安裝Minikube"><a href="#安裝Minikube" class="headerlink" title="安裝Minikube"></a>安裝Minikube</h1><p>最後要安裝這個部件可能是比較容易出問題的，因為用的是Windows 10 Hyper-V，所以啟動時會需要多下一些指令。<br>首先看一下官網的<a href="https://github.com/kubernetes/minikube#windows" target="_blank" rel="noopener">安裝文件</a>就寫明他只支援Windows 10 Enterprise、Windows 10 Professional或Windows 10 Education。<br>裡面也寫到要安裝Kubectl我們剛也裝過了，接下來就安裝Minikube。<br>也是用<a href="/2018/08/25/chocolatey/">Chocolatey</a>安裝。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">choco install minikube</span><br></pre></td></tr></table></figure><p>安裝不是什麼大問題很快就安裝好了，反而是在啟動時會遇到問題。<br>因為我們是用Hyper-V，所以在啟動時需要指定Hyper-V，也就是這個指令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--vm-driver hyperv</span><br></pre></td></tr></table></figure><p>再來Hyper-V要指派一個對外的虛擬網路交換器，這裡我設成K8S像下圖這樣<br><img src="/images/2018-08-25_18-47-31.jpg" alt="虛擬網路交換器設定"><br>這個【K8S】的名稱等一下啟動時會也用到，在後面加上</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--hyperv-virtual-switch=k8svswitch</span><br></pre></td></tr></table></figure><p>最後再加上方便看是否有錯誤的Log參數</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--v=3 --alsologtostderr</span><br></pre></td></tr></table></figure><h1 id="啟動Minikube"><a href="#啟動Minikube" class="headerlink" title="啟動Minikube"></a>啟動Minikube</h1><p>所以啟動指令就是</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">minikube start --vm-driver=hyperv --hyperv-virtual-switch=k8svswitch --v=3 --alsologtostderr</span><br></pre></td></tr></table></figure><p>第一次啟動時會比較久，還會下載相關的ISO檔案，安裝完成後就可以測試看看。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">minikube status</span><br></pre></td></tr></table></figure><p>應該會看到這樣的結果(IP依據電腦設定實際情況出現)</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">minikube: Running</span><br><span class="line">cluster: Running</span><br><span class="line">kubectl: Correctly Configured: pointing to minikube-vm at 192.168.8.104</span><br></pre></td></tr></table></figure><p>這樣安裝就算完成了。</p><h1 id="Minikube-啟動失敗"><a href="#Minikube-啟動失敗" class="headerlink" title="Minikube 啟動失敗"></a>Minikube 啟動失敗</h1><p>如果真的在Minikube啟動遇到問題，請先把Hyper-V裡的minkube虛擬機器關機後刪除。<br>然後把%userprofile%裡的.minikube目錄整個刪除再重新執行啟動作業。<br>Minikube就會整個重新下載及安裝VM了。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Kubernetes是一個開源系統，用於跨多個主機管理容器化應用程序，為應用程序的部署，維護和擴展提供基本機制。&lt;br&gt;本篇著重在Windows的安裝部份。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Kubernetes" scheme="https://jim51.github.io/tags/Kubernetes/"/>
+    
+  </entry>
+  
+  <entry>
     <title>好用的Windows 工具安裝套件-chocolatey</title>
     <link href="https://jim51.github.io/2018/08/25/chocolatey/"/>
     <id>https://jim51.github.io/2018/08/25/chocolatey/</id>
     <published>2018-08-25T09:01:52.000Z</published>
-    <updated>2018-08-25T09:42:25.269Z</updated>
+    <updated>2018-08-25T14:50:26.177Z</updated>
     
-    <content type="html"><![CDATA[<p>介紹一個超級好用的Windows 安裝工具 <a href="https://chocolatey.org/" target="_blank" rel="noopener">Chocolatey</a><br>有像Windows的(apt-get)(<a href="https://en.wikipedia.org/wiki/APT_%28Debian%29" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/APT_%28Debian%29</a>) 它可以裝的東西包羅萬象，不管是VSCODE還是Adobe Reader、Docker、Kubernetes通通沒問題真是太神奇了，廢話不多說馬上來介紹。<br><a id="more"></a></p><h1 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h1><p>來看看<a href="https://chocolatey.org/install" target="_blank" rel="noopener">官網安裝說明</a>，直接在cmd輸入下面指令貼上即可安裝 (指令很長哦，要全部複製)</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@"<span class="variable">%SystemRoot%</span>\System32\WindowsPowerShell\v1.<span class="number">0</span>\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.<span class="built_in">Net</span>.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" &amp;&amp; <span class="built_in">SET</span> "<span class="built_in">PATH</span>=<span class="variable">%PATH%</span>;<span class="variable">%ALLUSERSPROFILE%</span>\chocolatey\bin"</span><br></pre></td></tr></table></figure><p>也可以使用PowerShell指令</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Set</span>-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.<span class="built_in">Net</span>.WebClient).DownloadString('https://chocolatey.org/install.ps1'))</span><br></pre></td></tr></table></figure><p>然後，非常快速的就安裝好了<br><img src="/images/2018-08-25_17-25-55.jpg" alt="安裝完成"></p><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>安裝好後要來說說怎麼好用了，新裝機好一定先裝Chrome，只要執行下面指令:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">choco install googlechrome</span><br></pre></td></tr></table></figure><p>OK安裝完成，再來裝個VSCode吧。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">choco install vscode</span><br></pre></td></tr></table></figure><p>搞定，Adobe Reader也沒問題。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">choco install adobereader</span><br></pre></td></tr></table></figure><p>非常強大吧，有需要裝新軟體一定要試看看。</p>]]></content>
+    <content type="html"><![CDATA[<p>介紹一個超級好用的Windows 安裝工具 <a href="https://chocolatey.org/" target="_blank" rel="noopener">Chocolatey</a><br>有像Windows版本的<a href="https://en.wikipedia.org/wiki/APT_%28Debian%29" target="_blank" rel="noopener">apt-get</a> 它可以裝的東西包羅萬象，不管是VSCODE還是Adobe Reader、Docker、Kubernetes通通沒問題真是太神奇了，廢話不多說馬上來介紹。<br><a id="more"></a></p><h1 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h1><p>來看看<a href="https://chocolatey.org/install" target="_blank" rel="noopener">官網安裝說明</a>，直接在cmd輸入下面指令貼上即可安裝 (指令很長哦，要全部複製)</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@"<span class="variable">%SystemRoot%</span>\System32\WindowsPowerShell\v1.<span class="number">0</span>\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.<span class="built_in">Net</span>.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" &amp;&amp; <span class="built_in">SET</span> "<span class="built_in">PATH</span>=<span class="variable">%PATH%</span>;<span class="variable">%ALLUSERSPROFILE%</span>\chocolatey\bin"</span><br></pre></td></tr></table></figure><p>也可以使用PowerShell指令</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Set</span>-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.<span class="built_in">Net</span>.WebClient).DownloadString('https://chocolatey.org/install.ps1'))</span><br></pre></td></tr></table></figure><p>然後，非常快速的就安裝好了<br><img src="/images/2018-08-25_17-25-55.jpg" alt="安裝完成"></p><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>安裝好後要來說說怎麼好用了，新裝機好一定先裝Chrome，只要執行下面指令:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">choco install googlechrome</span><br></pre></td></tr></table></figure><p>OK安裝完成，再來裝個VSCode吧。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">choco install vscode</span><br></pre></td></tr></table></figure><p>搞定，Adobe Reader也沒問題。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">choco install adobereader</span><br></pre></td></tr></table></figure><p>非常強大吧，有需要裝新軟體一定要試看看。</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;介紹一個超級好用的Windows 安裝工具 &lt;a href=&quot;https://chocolatey.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Chocolatey&lt;/a&gt;&lt;br&gt;有像Windows的(apt-get)(&lt;a href=&quot;https://en.wikipedia.org/wiki/APT_%28Debian%29&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://en.wikipedia.org/wiki/APT_%28Debian%29&lt;/a&gt;) 它可以裝的東西包羅萬象，不管是VSCODE還是Adobe Reader、Docker、Kubernetes通通沒問題真是太神奇了，廢話不多說馬上來介紹。&lt;br&gt;
+      &lt;p&gt;介紹一個超級好用的Windows 安裝工具 &lt;a href=&quot;https://chocolatey.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Chocolatey&lt;/a&gt;&lt;br&gt;有像Windows版本的&lt;a href=&quot;https://en.wikipedia.org/wiki/APT_%28Debian%29&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;apt-get&lt;/a&gt; 它可以裝的東西包羅萬象，不管是VSCODE還是Adobe Reader、Docker、Kubernetes通通沒問題真是太神奇了，廢話不多說馬上來介紹。&lt;br&gt;
     
     </summary>
     
@@ -43,17 +63,13 @@
     <link href="https://jim51.github.io/2018/08/14/Hexo-duplicate-category/"/>
     <id>https://jim51.github.io/2018/08/14/Hexo-duplicate-category/</id>
     <published>2018-08-14T07:12:30.000Z</published>
-    <updated>2018-08-14T07:26:03.437Z</updated>
+    <updated>2018-08-25T09:55:09.282Z</updated>
     
-    <content type="html"><![CDATA[<p>Hexo寫文章時有時<del>手殘</del>下錯Category，然後修正Category時會出現數量為0的Category。<br>像下面這張圖  </p><p><img src="/images/2018-08-14_15-16-16.jpg" alt="多餘的Caregory">  </p><p>然後，它就一直在那裡了…不會消失。<br>這時我們需要重整一下快取資料，用下面的指令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hexo clean</span><br></pre></td></tr></table></figure><p>然後再重建就可以還我們清爽的Category囉。</p><p><img src="/images/2018-08-14_15-24-57.jpg" alt="多餘的Caregory">  </p>]]></content>
+    <content type="html"><![CDATA[<p>Hexo寫文章時有時<del>手殘</del>下錯Category，然後修正Category時會出現數量為0的Category。<br><a id="more"></a><br>像下面這張圖  </p><p><img src="/images/2018-08-14_15-16-16.jpg" alt="多餘的Caregory">  </p><p>然後，它就一直在那裡了…不會消失。<br>這時我們需要重整一下快取資料，用下面的指令</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hexo clean</span><br></pre></td></tr></table></figure><p>然後再重建就可以還我們清爽的Category囉。</p><p><img src="/images/2018-08-14_15-24-57.jpg" alt="多餘的Caregory">  </p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;Hexo寫文章時有時&lt;del&gt;手殘&lt;/del&gt;下錯Category，然後修正Category時會出現數量為0的Category。&lt;br&gt;像下面這張圖  &lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/images/2018-08-14_15-16-16.jpg&quot; alt=&quot;多餘的Ca
-      
+      &lt;p&gt;Hexo寫文章時有時&lt;del&gt;手殘&lt;/del&gt;下錯Category，然後修正Category時會出現數量為0的Category。&lt;br&gt;
     
     </summary>
     

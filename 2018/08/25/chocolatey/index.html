@@ -12,19 +12,19 @@
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="JIM51">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="介紹一個超級好用的Windows 安裝工具 Chocolatey有像Windows的(apt-get)(https://en.wikipedia.org/wiki/APT_%28Debian%29) 它可以裝的東西包羅萬象，不管是VSCODE還是Adobe Reader、Docker、Kubernetes通通沒問題真是太神奇了，廢話不多說馬上來介紹。">
+  <meta name="description" content="介紹一個超級好用的Windows 安裝工具 Chocolatey有像Windows版本的apt-get 它可以裝的東西包羅萬象，不管是VSCODE還是Adobe Reader、Docker、Kubernetes通通沒問題真是太神奇了，廢話不多說馬上來介紹。">
 <meta name="keywords" content="Tools">
 <meta property="og:type" content="article">
 <meta property="og:title" content="好用的Windows 工具安裝套件-chocolatey">
 <meta property="og:url" content="https://jim51.github.io/2018/08/25/chocolatey/index.html">
 <meta property="og:site_name" content="JIM51">
-<meta property="og:description" content="介紹一個超級好用的Windows 安裝工具 Chocolatey有像Windows的(apt-get)(https://en.wikipedia.org/wiki/APT_%28Debian%29) 它可以裝的東西包羅萬象，不管是VSCODE還是Adobe Reader、Docker、Kubernetes通通沒問題真是太神奇了，廢話不多說馬上來介紹。">
+<meta property="og:description" content="介紹一個超級好用的Windows 安裝工具 Chocolatey有像Windows版本的apt-get 它可以裝的東西包羅萬象，不管是VSCODE還是Adobe Reader、Docker、Kubernetes通通沒問題真是太神奇了，廢話不多說馬上來介紹。">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://jim51.github.io/images/2018-08-25_17-25-55.jpg">
-<meta property="og:updated_time" content="2018-08-25T09:42:25.269Z">
+<meta property="og:updated_time" content="2018-08-25T14:50:26.177Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="好用的Windows 工具安裝套件-chocolatey">
-<meta name="twitter:description" content="介紹一個超級好用的Windows 安裝工具 Chocolatey有像Windows的(apt-get)(https://en.wikipedia.org/wiki/APT_%28Debian%29) 它可以裝的東西包羅萬象，不管是VSCODE還是Adobe Reader、Docker、Kubernetes通通沒問題真是太神奇了，廢話不多說馬上來介紹。">
+<meta name="twitter:description" content="介紹一個超級好用的Windows 安裝工具 Chocolatey有像Windows版本的apt-get 它可以裝的東西包羅萬象，不管是VSCODE還是Adobe Reader、Docker、Kubernetes通通沒問題真是太神奇了，廢話不多說馬上來介紹。">
 <meta name="twitter:image" content="https://jim51.github.io/images/2018-08-25_17-25-55.jpg">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
@@ -148,7 +148,7 @@
 	
 	<section class="article typo">
   	<div class="article-entry" itemprop="articleBody">
-    	<p>介紹一個超級好用的Windows 安裝工具 <a href="https://chocolatey.org/" target="_blank" rel="noopener">Chocolatey</a><br>有像Windows的(apt-get)(<a href="https://en.wikipedia.org/wiki/APT_%28Debian%29" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/APT_%28Debian%29</a>) 它可以裝的東西包羅萬象，不管是VSCODE還是Adobe Reader、Docker、Kubernetes通通沒問題真是太神奇了，廢話不多說馬上來介紹。<br><a id="more"></a></p>
+    	<p>介紹一個超級好用的Windows 安裝工具 <a href="https://chocolatey.org/" target="_blank" rel="noopener">Chocolatey</a><br>有像Windows版本的<a href="https://en.wikipedia.org/wiki/APT_%28Debian%29" target="_blank" rel="noopener">apt-get</a> 它可以裝的東西包羅萬象，不管是VSCODE還是Adobe Reader、Docker、Kubernetes通通沒問題真是太神奇了，廢話不多說馬上來介紹。<br><a id="more"></a></p>
 <h1 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h1><p>來看看<a href="https://chocolatey.org/install" target="_blank" rel="noopener">官網安裝說明</a>，直接在cmd輸入下面指令貼上即可安裝 (指令很長哦，要全部複製)</p>
 <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@"<span class="variable">%SystemRoot%</span>\System32\WindowsPowerShell\v1.<span class="number">0</span>\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.<span class="built_in">Net</span>.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" &amp;&amp; <span class="built_in">SET</span> "<span class="built_in">PATH</span>=<span class="variable">%PATH%</span>;<span class="variable">%ALLUSERSPROFILE%</span>\chocolatey\bin"</span><br></pre></td></tr></table></figure>
 <p>也可以使用PowerShell指令</p>
@@ -173,6 +173,10 @@
 		
 	
 		<div class="art-item-footer">
+				
+					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2018/08/25/kubernetes-install/" rel="prev"  title="Kubernetes在Windows 10安裝手記">
+						Kubernetes在Windows 10安裝手記 
+					</a></span>
 				
 				
 					<span class="art-item-right">next：<a href="/2018/08/14/Hexo-duplicate-category/" rel="next"  title="Hexo 出現重複或是已移除文章但數量0的Category">
@@ -227,7 +231,7 @@
 <div class="m_widget tagcloud">
     <div class="header">Tags</div>
     <div class='content'>
-        <a href="/tags/Hexo/" style="font-size: 17px; color: #404040">Hexo</a> <a href="/tags/Office/" style="font-size: 14px; color: #808080">Office</a> <a href="/tags/TSQL/" style="font-size: 14px; color: #808080">TSQL</a> <a href="/tags/Tools/" style="font-size: 14px; color: #808080">Tools</a> <a href="/tags/Windows/" style="font-size: 20px; color: #000">Windows</a> <a href="/tags/Wordpress-Woocommerce/" style="font-size: 14px; color: #808080">Wordpress,Woocommerce</a>
+        <a href="/tags/Hexo/" style="font-size: 17px; color: #404040">Hexo</a> <a href="/tags/Kubernetes/" style="font-size: 14px; color: #808080">Kubernetes</a> <a href="/tags/Office/" style="font-size: 14px; color: #808080">Office</a> <a href="/tags/TSQL/" style="font-size: 14px; color: #808080">TSQL</a> <a href="/tags/Tools/" style="font-size: 14px; color: #808080">Tools</a> <a href="/tags/Windows/" style="font-size: 20px; color: #000">Windows</a> <a href="/tags/Wordpress-Woocommerce/" style="font-size: 14px; color: #808080">Wordpress,Woocommerce</a>
     </div>
 </div>
 
