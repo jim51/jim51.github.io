@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>好用的Windows 工具安裝套件-chocolatey</title>
+      <link href="/2018/08/25/chocolatey/"/>
+      <url>/2018/08/25/chocolatey/</url>
+      <content type="html"><![CDATA[<p>介紹一個超級好用的Windows 安裝工具 <a href="https://chocolatey.org/" target="_blank" rel="noopener">Chocolatey</a><br>有像Windows的(apt-get)(<a href="https://en.wikipedia.org/wiki/APT_%28Debian%29" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/APT_%28Debian%29</a>) 它可以裝的東西包羅萬象，不管是VSCODE還是Adobe Reader、Docker、Kubernetes通通沒問題真是太神奇了，廢話不多說馬上來介紹。<br><a id="more"></a></p><h1 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h1><p>來看看<a href="https://chocolatey.org/install" target="_blank" rel="noopener">官網安裝說明</a>，直接在cmd輸入下面指令貼上即可安裝 (指令很長哦，要全部複製)</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@"<span class="variable">%SystemRoot%</span>\System32\WindowsPowerShell\v1.<span class="number">0</span>\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.<span class="built_in">Net</span>.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" &amp;&amp; <span class="built_in">SET</span> "<span class="built_in">PATH</span>=<span class="variable">%PATH%</span>;<span class="variable">%ALLUSERSPROFILE%</span>\chocolatey\bin"</span><br></pre></td></tr></table></figure><p>也可以使用PowerShell指令</p><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Set</span>-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.<span class="built_in">Net</span>.WebClient).DownloadString('https://chocolatey.org/install.ps1'))</span><br></pre></td></tr></table></figure><p>然後，非常快速的就安裝好了<br><img src="/images/2018-08-25_17-25-55.jpg" alt="安裝完成"></p><h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>安裝好後要來說說怎麼好用了，新裝機好一定先裝Chrome，只要執行下面指令:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">choco install googlechrome</span><br></pre></td></tr></table></figure><p>OK安裝完成，再來裝個VSCode吧。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">choco install vscode</span><br></pre></td></tr></table></figure><p>搞定，Adobe Reader也沒問題。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">choco install adobereader</span><br></pre></td></tr></table></figure><p>非常強大吧，有需要裝新軟體一定要試看看。</p>]]></content>
+      
+      <categories>
+          
+          <category> Tools </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Tools </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>Hexo 出現重複或是已移除文章但數量0的Category</title>
       <link href="/2018/08/14/Hexo-duplicate-category/"/>
       <url>/2018/08/14/Hexo-duplicate-category/</url>

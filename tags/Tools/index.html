@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   
-  <title>Woocommerce Checkout 自動提示錯誤訊息 | JIM51</title>
+  <title>Tag: Tools | JIM51</title>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
   <meta name="HandheldFriendly" content="True" />
@@ -12,18 +12,13 @@
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="JIM51">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最近做一個Wordpress及Woocommerce的專案用了個付費的Theme大部份沒什麼太大問題的，但是這個版本的Theme與Woocommerce有一個Checkout相容的問題">
-<meta name="keywords" content="Wordpress,Woocommerce">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Woocommerce Checkout 自動提示錯誤訊息">
-<meta property="og:url" content="https://jim51.github.io/2018/08/14/woocommerce-checkout-auto-scoll-error-message/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="JIM51">
+<meta property="og:url" content="https://jim51.github.io/tags/Tools/index.html">
 <meta property="og:site_name" content="JIM51">
-<meta property="og:description" content="最近做一個Wordpress及Woocommerce的專案用了個付費的Theme大部份沒什麼太大問題的，但是這個版本的Theme與Woocommerce有一個Checkout相容的問題">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-08-14T06:39:32.026Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Woocommerce Checkout 自動提示錯誤訊息">
-<meta name="twitter:description" content="最近做一個Wordpress及Woocommerce的專案用了個付費的Theme大部份沒什麼太大問題的，但是這個版本的Theme與Woocommerce有一個Checkout相容的問題">
+<meta name="twitter:title" content="JIM51">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -122,84 +117,55 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        <article id="post-woocommerce-checkout-auto-scoll-error-message"
-  class="post white-box article-type-post"
-  itemscope itemprop="blogPost">
-	<section class='meta'>
-	<h2 class="title">
-  	<a href="/2018/08/14/woocommerce-checkout-auto-scoll-error-message/">
-    	Woocommerce Checkout 自動提示錯誤訊息
-    </a>
-  </h2>
-	<time>
-	  Aug 14, 2018
-	</time>
+        
+  <script>
+    window.subData= { title:'Tag : Tools'}
+  </script>
+
+<section class="post-list">
 	
+    <div class='post-wrapper'>
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2018/08/25/chocolatey/">
+        好用的Windows 工具安裝套件-chocolatey
+      </a>
+    </h2>
+    
+    <time>
+      Aug 25, 2018
+    </time>
+		
     
     <div class='cats'>
-        <a href="/categories/Wordpress/">Wordpress</a>, <a href="/categories/Wordpress/Woocommerce/">Woocommerce</a>
+        <a href="/categories/Tools/">Tools</a>
     </div>
 
-	</section>
-	
-		<section class="toc-wrapper"></section>
-	
-	<section class="article typo">
-  	<div class="article-entry" itemprop="articleBody">
-    	<p>最近做一個Wordpress及Woocommerce的專案用了個<a href="https://themeforest.net/item/depot-a-contemporary-theme-for-ecommerce/19536103" target="_blank" rel="noopener">付費的Theme</a><br>大部份沒什麼太大問題的，但是這個版本的Theme與Woocommerce有一個Checkout相容的問題<br><a id="more"></a><br>當一般使用Woocommerce時，在Checkout的地方如果欄位有沒填寫的必填欄位面會自動移至上面提示哪些欄位是沒填到的，像下面這個操作。  </p>
+  </section>
+  <section class="article typo">
+	  <p>介紹一個超級好用的Windows 安裝工具 <a href="https://chocolatey.org/" target="_blank" rel="noopener">Chocolatey</a><br>有像Windows的(apt-get)(<a href="https://en.wikipedia.org/wiki/APT_%28Debian%29" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/APT_%28Debian%29</a>) 它可以裝的東西包羅萬象，不管是VSCODE還是Adobe Reader、Docker、Kubernetes通通沒問題真是太神奇了，廢話不多說馬上來介紹。<br>
 
-<video src="/images/2018-08-14_00-08-44.mp4" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;" poster=" " autoplay="autoplay">
-</video>
-
-<p>但是裝了這個Theme，再匯入Demo資料後，就失效了</p>
-
-<video src="/images/2018-08-13_23-15-57.mp4" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;" poster=" " autoplay="autoplay">
-</video>
-
-<p>經過一番Debug後，確認是Jqury的套件相容性問題。<br>小弟對Wordpress並<del>不會</del>沒那麼熟悉，還沒辦法自己寫外掛修正，只好<del>土法煉鋼</del>直接改原始碼。<br>修正的原始碼路徑在這個檔案裡，由於是壓縮過的檔案，修改要特別的小心。  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js</span><br></pre></td></tr></table></figure>
-<p>將這段程式碼</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">o[0].scrollIntoView(&#123;behavior:&quot;smooth&quot;,block:&quot;center&quot;&#125;)</span><br></pre></td></tr></table></figure>
-<p>取代為這段</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">i(&quot;html, body&quot;).animate(&#123;scrollTop:o.offset().top-100&#125;,1e3)</span><br></pre></td></tr></table></figure>
-<p>這樣就可解決這個Bug了。</p>
-
-  	</div>
-	  
-	  <div class="article-tags tags">
+    
+	  <div class="readmore">
+      <a href="/2018/08/25/chocolatey/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
       
-        <a href="/tags/Wordpress-Woocommerce/">Wordpress,Woocommerce</a>
+        <a href="/tags/Tools/">Tools</a>
       
 	  </div>
     
-		
-	
-		<div class="art-item-footer">
-				
-					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2018/08/14/Hexo-duplicate-category/" rel="prev"  title="Hexo 出現重複或是已移除文章但數量0的Category">
-						Hexo 出現重複或是已移除文章但數量0的Category 
-					</a></span>
-				
-				
-					<span class="art-item-right">next：<a href="/2018/08/14/hexo-comments-disqus/" rel="next"  title="Hexo增加留言版功能-Disqus">
-						Hexo增加留言版功能-Disqus
-					</a><i class="icon icon-chevron-thin-right"></i></span>
-				
-		</div>
-	
-	</section>
-	
-		<section id="comments">
-			<div id="disqus_thread"></div>
-		</section>
-	
+  </section>
 </article>
-<script>
-	window.subData = {
-		title: 'Woocommerce Checkout 自動提示錯誤訊息',
-		tools: true
-	}
-</script>
+    </div>
+  
+</section>
+
 
       </div>
       <aside class='l_side'>
@@ -273,13 +239,11 @@
 <script>
   var disqus_shortname = 'jim51blog';
   
-  var disqus_url = 'https://jim51.github.io/2018/08/14/woocommerce-checkout-auto-scoll-error-message/';
-  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
