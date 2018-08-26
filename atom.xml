@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jim51.github.io/"/>
-  <updated>2018-08-26T03:39:20.725Z</updated>
+  <updated>2018-08-26T05:59:08.640Z</updated>
   <id>https://jim51.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>minikube 當本地端IP變動時啟動問題</title>
+    <link href="https://jim51.github.io/2018/08/26/minikube-change-ip/"/>
+    <id>https://jim51.github.io/2018/08/26/minikube-change-ip/</id>
+    <published>2018-08-26T05:38:58.000Z</published>
+    <updated>2018-08-26T05:59:08.640Z</updated>
+    
+    <content type="html"><![CDATA[<p>minikube執行在不會變動IP的桌機是完全沒問題，但如果是執行在常移動的筆電上就會遇到IP變動無法使用的情況。<br>執行kubectl會出現Unable to connect to the server。<br><a id="more"></a><br><img src="/images/2018-08-26_13-44-02.jpg" alt="Unable to connect to the server"></p><p>這個時候執行看看minikube是不是有什麼錯誤訊息。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">minikube status</span><br></pre></td></tr></table></figure><p>出現這個訊息<br><img src="/images/2018-08-26_13-47-11.jpg" alt="錯誤訊息"></p><p>請你執行minikube update-context更新，但這時我們直接重新啟動</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">minikube update-context</span><br></pre></td></tr></table></figure><p>但執行完還是有錯誤訊息，這時請直接將minikube停止再啟動</p><blockquote><p>如果執行停止VM及minikube一直無法停下來，請參考<a href="/2018/08/26/minikube-v-28-hyper-v-shutdown/">minikube v28 版本在 Windows 10 Hyper-V 無法關閉VM問題</a></p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">minikube stop</span><br><span class="line">minikube start</span><br></pre></td></tr></table></figure><p>就能解決這個問題了。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;minikube執行在不會變動IP的桌機是完全沒問題，但如果是執行在常移動的筆電上就會遇到IP變動無法使用的情況。&lt;br&gt;執行kubectl會出現Unable to connect to the server。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Kubernetes" scheme="https://jim51.github.io/categories/Kubernetes/"/>
+    
+    
+      <category term="Kubernetes" scheme="https://jim51.github.io/tags/Kubernetes/"/>
+    
+  </entry>
   
   <entry>
     <title>minikube v28 版本在 Windows 10 Hyper-V 無法關閉VM問題</title>
