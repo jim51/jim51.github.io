@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Docker 常用指令集 | JIM51</title>
+  <title>Tag: Docker, Wordpress | JIM51</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
   <meta name="HandheldFriendly" content="True">
@@ -12,18 +12,13 @@
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="JIM51">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="把一些常用的Docker指令集做個備份">
-<meta name="keywords" content="Docker">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Docker 常用指令集">
-<meta property="og:url" content="https://jim51.github.io/2019/01/21/docker-command/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="JIM51">
+<meta property="og:url" content="https://jim51.github.io/tags/Docker-Wordpress/index.html">
 <meta property="og:site_name" content="JIM51">
-<meta property="og:description" content="把一些常用的Docker指令集做個備份">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-21T01:02:39.367Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Docker 常用指令集">
-<meta name="twitter:description" content="把一些常用的Docker指令集做個備份">
+<meta name="twitter:title" content="JIM51">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -122,81 +117,55 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        <article id="post-docker-command" class="post white-box article-type-post" itemscope="" itemprop="blogPost">
-	<section class="meta">
-	<h2 class="title">
-  	<a href="/2019/01/21/docker-command/">
-    	Docker 常用指令集
-    </a>
-  </h2>
-	<time>
-	  Jan 21, 2019
-	</time>
+        
+  <script>
+    window.subData= { title:'Tag : Docker, Wordpress'}
+  </script>
+
+<section class="post-list">
 	
+    <div class="post-wrapper">
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
+      <a href="/2019/01/21/docker-nginx-mysql-wordpress-qucick/">
+        Docker快速在10分鐘之內架設Wordpress
+      </a>
+    </h2>
+    
+    <time>
+      Jan 21, 2019
+    </time>
+		
     
     <div class="cats">
         <a href="/categories/Docker/">Docker</a>
     </div>
 
-	</section>
-	
-		<section class="toc-wrapper"></section>
-	
-	<section class="article typo">
-  	<div class="article-entry" itemprop="articleBody">
-    	<p>把一些常用的Docker指令集做個備份</p>
-<a id="more"></a>
-<p>列出目前的Contaner</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
-<p>停止執行中的Container</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stop [CONTAINER ID]</span><br></pre></td></tr></table></figure>
-<p>刪除Container</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm [CONTAINER ID]</span><br></pre></td></tr></table></figure>
-<p>列出Image</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
-<p>刪除Image</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi [IMAGE ID]</span><br></pre></td></tr></table></figure>
-<p>刪除所有的Container for linux</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker stop $(docker ps -a -q)</span><br><span class="line">docker rm $(docker ps -a -q)</span><br></pre></td></tr></table></figure>
-<p>刪除所有的Container for Windows command<br>RemoveAllDockerContainer.bat</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">FOR /f &quot;tokens=*&quot; %%i IN (&apos;docker ps -aq&apos;) DO docker stop %%i</span><br><span class="line">FOR /f &quot;tokens=*&quot; %%i IN (&apos;docker ps -aq&apos;) DO docker rm %%i</span><br><span class="line">FOR /f &quot;tokens=*&quot; %%i IN (&apos;docker images --format &quot;&#123;&#123;.ID&#125;&#125;&quot;&apos;) DO docker rmi %%i</span><br></pre></td></tr></table></figure>
+  </section>
+  <section class="article typo">
+	  <p>10分鐘內快速架設一台Wordpress主機，用VPS + Docker就對了。<br>
 
-  	</div>
-	  
-	  <div class="article-tags tags">
+    
+	  <div class="readmore">
+      <a href="/2019/01/21/docker-nginx-mysql-wordpress-qucick/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
       
-        <a href="/tags/Docker/">Docker</a>
+        <a href="/tags/Docker-Wordpress/">Docker, Wordpress</a>
       
 	  </div>
     
-		
-	
-		<div class="art-item-footer">
-				
-					<span class="art-item-left"><i class="icon icon-chevron-thin-left"></i>prev：<a href="/2019/01/21/linux-command/" rel="prev" title="Linux 常用指令集">
-						Linux 常用指令集 
-					</a></span>
-				
-				
-					<span class="art-item-right">next：<a href="/2018/08/26/minikube-change-ip/" rel="next" title="minikube 當本地端IP變動時啟動問題">
-						minikube 當本地端IP變動時啟動問題
-					</a><i class="icon icon-chevron-thin-right"></i></span>
-				
-		</div>
-	
-	</section>
-	
-		<section id="comments">
-			<div id="disqus_thread"></div>
-		</section>
-	
+  </p></section>
 </article>
-<script>
-	window.subData = {
-		title: 'Docker 常用指令集',
-		tools: true
-	}
-</script>
+    </div>
+  
+</section>
+
 
       </div>
       <aside class='l_side'>
@@ -274,13 +243,11 @@
 <script>
   var disqus_shortname = 'jim51blog';
   
-  var disqus_url = 'https://jim51.github.io/2019/01/21/docker-command/';
-  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
