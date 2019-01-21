@@ -17,7 +17,13 @@
       
         <tags>
             
-            <tag> Docker, Wordpress, NginX, SSL </tag>
+            <tag> Docker </tag>
+            
+            <tag> Wordpress </tag>
+            
+            <tag> NginX </tag>
+            
+            <tag> SSL </tag>
             
         </tags>
       
@@ -38,7 +44,9 @@
       
         <tags>
             
-            <tag> Docker, Wordpress </tag>
+            <tag> Docker </tag>
+            
+            <tag> Wordpress </tag>
             
         </tags>
       
