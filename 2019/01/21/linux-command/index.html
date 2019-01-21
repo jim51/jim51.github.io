@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Category: Hexo | JIM51</title>
+  <title>Linux 常用指令集 | JIM51</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
   <meta name="HandheldFriendly" content="True">
@@ -12,13 +12,18 @@
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="JIM51">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="JIM51">
-<meta property="og:url" content="https://jim51.github.io/categories/Hexo/index.html">
+  <meta name="description" content="把一些常用的Linux指令集做個備份 複製資料至遠端Linux 12# upload: local -&amp;gt; remotescp local_file user@remote_host:remote_file 從遠端Linux複製檔案下來 12# download: remote -&amp;gt; localscp user@remote_host:remote_file local_file 刪除目">
+<meta name="keywords" content="Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux 常用指令集">
+<meta property="og:url" content="https://jim51.github.io/2019/01/21/linux-command/index.html">
 <meta property="og:site_name" content="JIM51">
+<meta property="og:description" content="把一些常用的Linux指令集做個備份 複製資料至遠端Linux 12# upload: local -&amp;gt; remotescp local_file user@remote_host:remote_file 從遠端Linux複製檔案下來 12# download: remote -&amp;gt; localscp user@remote_host:remote_file local_file 刪除目">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-01-21T01:11:34.622Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JIM51">
+<meta name="twitter:title" content="Linux 常用指令集">
+<meta name="twitter:description" content="把一些常用的Linux指令集做個備份 複製資料至遠端Linux 12# upload: local -&amp;gt; remotescp local_file user@remote_host:remote_file 從遠端Linux複製檔案下來 12# download: remote -&amp;gt; localscp user@remote_host:remote_file local_file 刪除目">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -117,175 +122,72 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        
-  <script>
-    window.subData= { title:'Category : Hexo'}
-  </script>
-
-<section class="post-list">
+        <article id="post-linux-command" class="post white-box article-type-post" itemscope="" itemprop="blogPost">
+	<section class="meta">
+	<h2 class="title">
+  	<a href="/2019/01/21/linux-command/">
+    	Linux 常用指令集
+    </a>
+  </h2>
+	<time>
+	  Jan 21, 2019
+	</time>
 	
-    <div class="post-wrapper">
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/08/14/Hexo-duplicate-category/">
-        Hexo 出現重複或是已移除文章但數量0的Category
-      </a>
-    </h2>
-    
-    <time>
-      Aug 14, 2018
-    </time>
-		
     
     <div class="cats">
-        <a href="/categories/Hexo/">Hexo</a>
+        <a href="/categories/Linux/">Linux</a>
     </div>
 
-  </section>
-  <section class="article typo">
-	  <p>Hexo寫文章時有時<del>手殘</del>下錯Category，然後修正Category時會出現數量為0的Category。<br>
+	</section>
+	
+		<section class="toc-wrapper"></section>
+	
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<p>把一些常用的Linux指令集做個備份</p>
+<p>複製資料至遠端Linux</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># upload: local -&gt; remote</span><br><span class="line">scp local_file user@remote_host:remote_file</span><br></pre></td></tr></table></figure>
+<p>從遠端Linux複製檔案下來</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># download: remote -&gt; local</span><br><span class="line">scp user@remote_host:remote_file local_file</span><br></pre></td></tr></table></figure>
+<p>刪除目錄</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf [directname]</span><br></pre></td></tr></table></figure>
+<p>複製目錄</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp -R [SourceDirectory] [TargetDirectory]</span><br></pre></td></tr></table></figure>
+<p>解壓縮</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unzip FileName.zip</span><br></pre></td></tr></table></figure>
 
-    
-	  <div class="readmore">
-      <a href="/2018/08/14/Hexo-duplicate-category/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
+  	</div>
+	  
+	  <div class="article-tags tags">
       
-        <a href="/tags/Hexo/">Hexo</a>
+        <a href="/tags/Linux/">Linux</a>
       
 	  </div>
     
-  </p></section>
-</article>
-    </div>
-  
-    <div class="post-wrapper">
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/08/14/hexo-comments-disqus/">
-        Hexo增加留言版功能-Disqus
-      </a>
-    </h2>
-    
-    <time>
-      Aug 14, 2018
-    </time>
 		
-    
-    <div class="cats">
-        <a href="/categories/Hexo/">Hexo</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <p>Blog互動功能是非常必要的，尤其大部份Blog每篇文章下面都很常出現的一個留這版就是Disqus。<br>現在來說明如何新增這個功能到Hexo。<br>
-
-    
-	  <div class="readmore">
-      <a href="/2018/08/14/hexo-comments-disqus/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Hexo/">Hexo</a>
-      
-	  </div>
-    
-  </p></section>
+	
+		<div class="art-item-footer">
+				
+				
+					<span class="art-item-right">next：<a href="/2019/01/21/docker-command/" rel="next" title="Docker 常用指令集">
+						Docker 常用指令集
+					</a><i class="icon icon-chevron-thin-right"></i></span>
+				
+		</div>
+	
+	</section>
+	
+		<section id="comments">
+			<div id="disqus_thread"></div>
+		</section>
+	
 </article>
-    </div>
-  
-    <div class="post-wrapper">
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/08/14/hexo-google-analytics/">
-        Hexo裡新增Google analticts追蹤碼
-      </a>
-    </h2>
-    
-    <time>
-      Aug 14, 2018
-    </time>
-		
-    
-    <div class="cats">
-        <a href="/categories/Hexo/">Hexo</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <p>Hexo網站架起來後，想看看網站流量如何、有沒有人看最簡單的方式，就是加入Google Analytics追蹤網站流量。<br>它的功能非常強大同時也是免費的，立馬加入它吧。<br>
-
-    
-	  <div class="readmore">
-      <a href="/2018/08/14/hexo-google-analytics/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Hexo/">Hexo</a>
-      
-	  </div>
-    
-  </p></section>
-</article>
-    </div>
-  
-    <div class="post-wrapper">
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/04/22/hexo-init/">
-        Hexo 簡介+架設
-      </a>
-    </h2>
-    
-    <time>
-      Apr 22, 2018
-    </time>
-		
-    
-    <div class="cats">
-        <a href="/categories/Hexo/">Hexo</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <p>本Blog是由Hexo架設而成的，想介紹一下這個超棒的Blog框架便把第一篇文章給了它。<br>
-
-    
-	  <div class="readmore">
-      <a href="/2018/04/22/hexo-init/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Hexo/">Hexo</a>
-      
-	  </div>
-    
-  </p></section>
-</article>
-    </div>
-  
-</section>
-
+<script>
+	window.subData = {
+		title: 'Linux 常用指令集',
+		tools: true
+	}
+</script>
 
       </div>
       <aside class='l_side'>
@@ -363,11 +265,13 @@
 <script>
   var disqus_shortname = 'jim51blog';
   
+  var disqus_url = 'https://jim51.github.io/2019/01/21/linux-command/';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>

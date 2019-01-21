@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jim51.github.io/"/>
-  <updated>2019-01-21T01:02:39.367Z</updated>
+  <updated>2019-01-21T01:11:34.622Z</updated>
   <id>https://jim51.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux 常用指令集</title>
+    <link href="https://jim51.github.io/2019/01/21/linux-command/"/>
+    <id>https://jim51.github.io/2019/01/21/linux-command/</id>
+    <published>2019-01-21T01:06:56.000Z</published>
+    <updated>2019-01-21T01:11:34.622Z</updated>
+    
+    <content type="html"><![CDATA[<p>把一些常用的Linux指令集做個備份</p><p>複製資料至遠端Linux</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># upload: local -&gt; remote</span><br><span class="line">scp local_file user@remote_host:remote_file</span><br></pre></td></tr></table></figure><p>從遠端Linux複製檔案下來</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># download: remote -&gt; local</span><br><span class="line">scp user@remote_host:remote_file local_file</span><br></pre></td></tr></table></figure><p>刪除目錄</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf [directname]</span><br></pre></td></tr></table></figure><p>複製目錄</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp -R [SourceDirectory] [TargetDirectory]</span><br></pre></td></tr></table></figure><p>解壓縮</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unzip FileName.zip</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;把一些常用的Linux指令集做個備份&lt;/p&gt;
+&lt;p&gt;複製資料至遠端Linux&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://jim51.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="https://jim51.github.io/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Docker 常用指令集</title>
