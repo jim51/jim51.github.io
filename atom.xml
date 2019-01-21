@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jim51.github.io/"/>
-  <updated>2018-08-26T05:59:08.640Z</updated>
+  <updated>2019-01-21T01:02:39.367Z</updated>
   <id>https://jim51.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Docker 常用指令集</title>
+    <link href="https://jim51.github.io/2019/01/21/docker-command/"/>
+    <id>https://jim51.github.io/2019/01/21/docker-command/</id>
+    <published>2019-01-21T00:53:40.000Z</published>
+    <updated>2019-01-21T01:02:39.367Z</updated>
+    
+    <content type="html"><![CDATA[<p>把一些常用的Docker指令集做個備份</p><a id="more"></a><p>列出目前的Contaner</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure><p>停止執行中的Container</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stop [CONTAINER ID]</span><br></pre></td></tr></table></figure><p>刪除Container</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm [CONTAINER ID]</span><br></pre></td></tr></table></figure><p>列出Image</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure><p>刪除Image</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi [IMAGE ID]</span><br></pre></td></tr></table></figure><p>刪除所有的Container for linux</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker stop $(docker ps -a -q)</span><br><span class="line">docker rm $(docker ps -a -q)</span><br></pre></td></tr></table></figure><p>刪除所有的Container for Windows command<br>RemoveAllDockerContainer.bat</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">FOR /f &quot;tokens=*&quot; %%i IN (&apos;docker ps -aq&apos;) DO docker stop %%i</span><br><span class="line">FOR /f &quot;tokens=*&quot; %%i IN (&apos;docker ps -aq&apos;) DO docker rm %%i</span><br><span class="line">FOR /f &quot;tokens=*&quot; %%i IN (&apos;docker images --format &quot;&#123;&#123;.ID&#125;&#125;&quot;&apos;) DO docker rmi %%i</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;把一些常用的Docker指令集做個備份&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Docker" scheme="https://jim51.github.io/categories/Docker/"/>
+    
+    
+      <category term="Docker" scheme="https://jim51.github.io/tags/Docker/"/>
+    
+  </entry>
   
   <entry>
     <title>minikube 當本地端IP變動時啟動問題</title>
