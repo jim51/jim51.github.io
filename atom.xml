@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jim51.github.io/"/>
-  <updated>2019-05-28T12:26:47.690Z</updated>
+  <updated>2019-05-28T12:45:28.379Z</updated>
   <id>https://jim51.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://jim51.github.io/2019/05/28/check-docker-mysql-restart/"/>
     <id>https://jim51.github.io/2019/05/28/check-docker-mysql-restart/</id>
     <published>2019-05-28T12:18:39.000Z</published>
-    <updated>2019-05-28T12:26:47.690Z</updated>
+    <updated>2019-05-28T12:45:28.379Z</updated>
     
     <content type="html"><![CDATA[<p>最近遇到一個MySQL in docker因為資源不足會掛點的問題，<br>打算先用cron來做監控並自動重開機。<br><a id="more"></a></p><p>先打開編輯cron</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -e</span><br></pre></td></tr></table></figure><p>然後在裡面加上要監控的MySQL指令,這行指令主要用於<br>ping mysql,如果不成功,就執行docker restart db</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*/10 * * * * if ! nc -z -v -w30 172.18.0.5 3306; then docker restart db; fi</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -34,7 +34,9 @@
       <category term="Docker" scheme="https://jim51.github.io/categories/Docker/"/>
     
     
-      <category term="Docker, Linux" scheme="https://jim51.github.io/tags/Docker-Linux/"/>
+      <category term="Docker" scheme="https://jim51.github.io/tags/Docker/"/>
+    
+      <category term="Linux" scheme="https://jim51.github.io/tags/Linux/"/>
     
   </entry>
   
