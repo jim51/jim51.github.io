@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>使用cron確認mysql是否crash並重新啟動</title>
+      <link href="/2019/05/28/check-docker-mysql-restart/"/>
+      <url>/2019/05/28/check-docker-mysql-restart/</url>
+      <content type="html"><![CDATA[<p>最近遇到一個MySQL in docker因為資源不足會掛點的問題，<br>打算先用cron來做監控並自動重開機。<br><a id="more"></a></p><p>先打開編輯cron</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -e</span><br></pre></td></tr></table></figure><p>然後在裡面加上要監控的MySQL指令,這行指令主要用於<br>ping mysql,如果不成功,就執行docker restart db</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*/10 * * * * if ! nc -z -v -w30 172.18.0.5 3306; then docker restart db; fi</span><br></pre></td></tr></table></figure>]]></content>
+      
+      <categories>
+          
+          <category> Docker </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Docker, Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>GDrive 分享直接下載連結</title>
       <link href="/2019/01/31/gdrive-download-direct/"/>
       <url>/2019/01/31/gdrive-download-direct/</url>

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Tag: Office | JIM51</title>
+  <title>使用cron確認mysql是否crash並重新啟動 | JIM51</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
   <meta name="HandheldFriendly" content="True">
@@ -12,13 +12,18 @@
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="JIM51">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="JIM51">
-<meta property="og:url" content="https://jim51.github.io/tags/Office/index.html">
+  <meta name="description" content="最近遇到一個MySQL in docker因為資源不足會掛點的問題，打算先用cron來做監控並自動重開機。">
+<meta name="keywords" content="Docker, Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用cron確認mysql是否crash並重新啟動">
+<meta property="og:url" content="https://jim51.github.io/2019/05/28/check-docker-mysql-restart/index.html">
 <meta property="og:site_name" content="JIM51">
+<meta property="og:description" content="最近遇到一個MySQL in docker因為資源不足會掛點的問題，打算先用cron來做監控並自動重開機。">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-28T12:26:47.690Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JIM51">
+<meta name="twitter:title" content="使用cron確認mysql是否crash並重新啟動">
+<meta name="twitter:description" content="最近遇到一個MySQL in docker因為資源不足會掛點的問題，打算先用cron來做監控並自動重開機。">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -117,55 +122,65 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        
-  <script>
-    window.subData= { title:'Tag : Office'}
-  </script>
-
-<section class="post-list">
+        <article id="post-check-docker-mysql-restart" class="post white-box article-type-post" itemscope="" itemprop="blogPost">
+	<section class="meta">
+	<h2 class="title">
+  	<a href="/2019/05/28/check-docker-mysql-restart/">
+    	使用cron確認mysql是否crash並重新啟動
+    </a>
+  </h2>
+	<time>
+	  May 28, 2019
+	</time>
 	
-    <div class="post-wrapper">
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/04/26/office-2016-dark-theme/">
-        Office 2016 黑色主題
-      </a>
-    </h2>
-    
-    <time>
-      Apr 26, 2018
-    </time>
-		
     
     <div class="cats">
-        <a href="/categories/Office/">Office</a>
+        <a href="/categories/Docker/">Docker</a>
     </div>
 
-  </section>
-  <section class="article typo">
-	  <p>Office 2010時有個背景主題是黑色，後來到Office 2016一開始還沒有，在2016/01月時，加入了黑色主題。<br>
-
-    
-	  <div class="readmore">
-      <a href="/2018/04/26/office-2016-dark-theme/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
+	</section>
+	
+		<section class="toc-wrapper"></section>
+	
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<p>最近遇到一個MySQL in docker因為資源不足會掛點的問題，<br>打算先用cron來做監控並自動重開機。<br><a id="more"></a></p>
+<p>先打開編輯cron</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -e</span><br></pre></td></tr></table></figure>
+<p>然後在裡面加上要監控的MySQL指令,這行指令主要用於<br>ping mysql,如果不成功,就執行docker restart db</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*/10 * * * * if ! nc -z -v -w30 172.18.0.5 3306; then docker restart db; fi</span><br></pre></td></tr></table></figure>
+  	</div>
+	  
+	  <div class="article-tags tags">
       
-        <a href="/tags/Office/">Office</a>
+        <a href="/tags/Docker-Linux/">Docker, Linux</a>
       
 	  </div>
     
-  </p></section>
+		
+	
+		<div class="art-item-footer">
+				
+				
+					<span class="art-item-right">next：<a href="/2019/01/31/gdrive-download-direct/" rel="next" title="GDrive 分享直接下載連結">
+						GDrive 分享直接下載連結
+					</a><i class="icon icon-chevron-thin-right"></i></span>
+				
+		</div>
+	
+	</section>
+	
+		<section id="comments">
+			<div id="disqus_thread"></div>
+		</section>
+	
 </article>
-    </div>
-  
-</section>
-
+<script>
+	window.subData = {
+		title: '使用cron確認mysql是否crash並重新啟動',
+		tools: true
+	}
+</script>
 
       </div>
       <aside class='l_side'>
@@ -243,11 +258,13 @@
 <script>
   var disqus_shortname = 'jim51blog';
   
+  var disqus_url = 'https://jim51.github.io/2019/05/28/check-docker-mysql-restart/';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>

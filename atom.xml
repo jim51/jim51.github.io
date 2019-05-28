@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jim51.github.io/"/>
-  <updated>2019-01-31T08:36:54.879Z</updated>
+  <updated>2019-05-28T12:26:47.690Z</updated>
   <id>https://jim51.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用cron確認mysql是否crash並重新啟動</title>
+    <link href="https://jim51.github.io/2019/05/28/check-docker-mysql-restart/"/>
+    <id>https://jim51.github.io/2019/05/28/check-docker-mysql-restart/</id>
+    <published>2019-05-28T12:18:39.000Z</published>
+    <updated>2019-05-28T12:26:47.690Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近遇到一個MySQL in docker因為資源不足會掛點的問題，<br>打算先用cron來做監控並自動重開機。<br><a id="more"></a></p><p>先打開編輯cron</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crontab -e</span><br></pre></td></tr></table></figure><p>然後在裡面加上要監控的MySQL指令,這行指令主要用於<br>ping mysql,如果不成功,就執行docker restart db</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*/10 * * * * if ! nc -z -v -w30 172.18.0.5 3306; then docker restart db; fi</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;最近遇到一個MySQL in docker因為資源不足會掛點的問題，&lt;br&gt;打算先用cron來做監控並自動重開機。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="Docker" scheme="https://jim51.github.io/categories/Docker/"/>
+    
+    
+      <category term="Docker, Linux" scheme="https://jim51.github.io/tags/Docker-Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>GDrive 分享直接下載連結</title>
@@ -444,28 +466,6 @@
     <summary type="html">
     
       &lt;p&gt;開發人員有時難免會需要作VM用乾淨的環境測試程式，或是其他Lab。&lt;br&gt;最簡單合法的作法就是去微軟網站&lt;a href=&quot;https://www.microsoft.com/zh-tw/windowsforbusiness/try&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;申請Windwos 10試用評估&lt;/a&gt;&lt;br&gt;預設就給您90的期限，但時間到又要重裝實在很麻煩。&lt;br&gt;
-    
-    </summary>
-    
-      <category term="Windows" scheme="https://jim51.github.io/categories/Windows/"/>
-    
-    
-      <category term="Windows" scheme="https://jim51.github.io/tags/Windows/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows 內建的認證密碼管理</title>
-    <link href="https://jim51.github.io/2018/04/24/windows-accessing-credential-manager/"/>
-    <id>https://jim51.github.io/2018/04/24/windows-accessing-credential-manager/</id>
-    <published>2018-04-24T03:57:34.000Z</published>
-    <updated>2018-04-24T05:11:30.328Z</updated>
-    
-    <content type="html"><![CDATA[<p>存取網芳或是存取遠端桌面時，常都會有記憶密碼的選項，如果改了密碼有時會造成無法登入。<br>或是你想把電腦裡的密碼刪除，官方網站提供的說明連結<a href="https://support.microsoft.com/zh-tw/help/4026814/windows-accessing-credential-manager" target="_blank" rel="noopener">存取認證管理員</a><br>如果想用下指令方式可以在命令提示字元輸入<br><a id="more"></a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">control userpasswords2</span><br></pre></td></tr></table></figure></p><p>一樣可以叫認證管理員畫面。</p><p><img src="/images/x005.jpg" alt="使用者帳戶"><br><img src="/images/x006.jpg" alt="認證管理員"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;存取網芳或是存取遠端桌面時，常都會有記憶密碼的選項，如果改了密碼有時會造成無法登入。&lt;br&gt;或是你想把電腦裡的密碼刪除，官方網站提供的說明連結&lt;a href=&quot;https://support.microsoft.com/zh-tw/help/4026814/windows-accessing-credential-manager&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;存取認證管理員&lt;/a&gt;&lt;br&gt;如果想用下指令方式可以在命令提示字元輸入&lt;br&gt;
     
     </summary>
     
