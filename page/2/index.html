@@ -125,6 +125,46 @@
   <section class="meta">
     
     <h2 class="title">
+      <a href="/2018/08/25/kubernetes-install/">
+        Kubernetes在Windows 10安裝手記
+      </a>
+    </h2>
+    
+    <time>
+      Aug 25, 2018
+    </time>
+		
+    
+    <div class="cats">
+        <a href="/categories/Kubernetes/">Kubernetes</a>
+    </div>
+
+  </section>
+  <section class="article typo">
+	  <p>Kubernetes是一個開源系統，用於跨多個主機管理容器化應用程序，為應用程序的部署，維護和擴展提供基本機制。<br>本篇著重在Windows的安裝部份。<br>
+
+    
+	  <div class="readmore">
+      <a href="/2018/08/25/kubernetes-install/">Read More</a>
+    </div>
+    
+    
+    
+	  <div class="full-width auto-padding tags">
+      
+        <a href="/tags/Kubernetes/">Kubernetes</a>
+      
+	  </div>
+    
+  </p></section>
+</article>
+    </div>
+  
+    <div class="post-wrapper">
+      <article class="post reveal">
+  <section class="meta">
+    
+    <h2 class="title">
       <a href="/2018/08/25/chocolatey/">
         好用的Windows 工具安裝套件-chocolatey
       </a>
@@ -478,43 +518,6 @@
 </article>
     </div>
   
-    <div class="post-wrapper">
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/04/24/sql-repeat-delete/">
-        SQL 刪除重複資料
-      </a>
-    </h2>
-    
-    <time>
-      Apr 24, 2018
-    </time>
-		
-    
-    <div class="cats">
-        <a href="/categories/TSQL/">TSQL</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <p>有時整理SQL資料時需要刪除重覆資料，在這裡做個筆記。</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> rowcount <span class="number">1</span></span><br><span class="line"><span class="keyword">WHILE</span> <span class="number">1</span>=<span class="number">1</span></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">  <span class="keyword">delete</span> <span class="keyword">from</span> <span class="keyword">table</span> <span class="keyword">where</span> <span class="keyword">id</span> <span class="keyword">in</span>(<span class="keyword">select</span> <span class="keyword">id</span> <span class="keyword">from</span> <span class="keyword">table</span> <span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">id</span> <span class="keyword">having</span> <span class="keyword">count</span>(*)&gt;<span class="number">1</span>)</span><br><span class="line">  <span class="keyword">if</span> @@rowcount=<span class="number">0</span></span><br><span class="line">     break</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">set</span> rowcount <span class="number">0</span></span><br></pre></td></tr></table></figure>
-
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/TSQL/">TSQL</a>
-      
-	  </div>
-    
-  </section>
-</article>
-    </div>
-  
 </section>
 
 
@@ -549,7 +552,7 @@
     
         <li><a class="flat-box" href="/categories/Kubernetes/"><div class="name">Kubernetes</div><div class="badget">3</div></a></li>
     
-        <li><a class="flat-box" href="/categories/Linux/"><div class="name">Linux</div><div class="badget">1</div></a></li>
+        <li><a class="flat-box" href="/categories/Linux/"><div class="name">Linux</div><div class="badget">2</div></a></li>
     
         <li><a class="flat-box" href="/categories/Office/"><div class="name">Office</div><div class="badget">1</div></a></li>
     
@@ -572,7 +575,7 @@
 <div class="m_widget tagcloud">
     <div class="header">Tags</div>
     <div class="content">
-        <a href="/tags/Docker/" style="font-size: 18.5px; color: #202020">Docker</a> <a href="/tags/Hexo/" style="font-size: 18.5px; color: #202020">Hexo</a> <a href="/tags/Kubernetes/" style="font-size: 17px; color: #404040">Kubernetes</a> <a href="/tags/Linux/" style="font-size: 15.5px; color: #606060">Linux</a> <a href="/tags/NginX/" style="font-size: 14px; color: #808080">NginX</a> <a href="/tags/Office/" style="font-size: 14px; color: #808080">Office</a> <a href="/tags/SSL/" style="font-size: 14px; color: #808080">SSL</a> <a href="/tags/TSQL/" style="font-size: 14px; color: #808080">TSQL</a> <a href="/tags/Tools/" style="font-size: 15.5px; color: #606060">Tools</a> <a href="/tags/Windows/" style="font-size: 20px; color: #000">Windows</a> <a href="/tags/Wordpress/" style="font-size: 17px; color: #404040">Wordpress</a> <a href="/tags/Wordpress-Woocommerce/" style="font-size: 14px; color: #808080">Wordpress,Woocommerce</a>
+        <a href="/tags/Docker/" style="font-size: 18.5px; color: #202020">Docker</a> <a href="/tags/Hexo/" style="font-size: 18.5px; color: #202020">Hexo</a> <a href="/tags/Kubernetes/" style="font-size: 17px; color: #404040">Kubernetes</a> <a href="/tags/Linux/" style="font-size: 17px; color: #404040">Linux</a> <a href="/tags/NginX/" style="font-size: 14px; color: #808080">NginX</a> <a href="/tags/Office/" style="font-size: 14px; color: #808080">Office</a> <a href="/tags/SSL/" style="font-size: 14px; color: #808080">SSL</a> <a href="/tags/TSQL/" style="font-size: 14px; color: #808080">TSQL</a> <a href="/tags/Tools/" style="font-size: 15.5px; color: #606060">Tools</a> <a href="/tags/Windows/" style="font-size: 20px; color: #000">Windows</a> <a href="/tags/Wordpress/" style="font-size: 17px; color: #404040">Wordpress</a> <a href="/tags/Wordpress-Woocommerce/" style="font-size: 14px; color: #808080">Wordpress,Woocommerce</a>
     </div>
 </div>
 

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jim51.github.io/"/>
-  <updated>2019-05-31T01:18:13.667Z</updated>
+  <updated>2019-05-31T09:51:44.041Z</updated>
   <id>https://jim51.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>透過SSH進行Socks5 Proxy</title>
+    <link href="https://jim51.github.io/2019/05/31/proxy-from-ssh/"/>
+    <id>https://jim51.github.io/2019/05/31/proxy-from-ssh/</id>
+    <published>2019-05-31T09:46:33.000Z</published>
+    <updated>2019-05-31T09:51:44.041Z</updated>
+    
+    <content type="html"><![CDATA[<p>透過一台外部的Linux SSH進行Scoks5 Proxy只要執行一行指令</p><a id="more"></a><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -NfD 3128 username@home.com</span><br></pre></td></tr></table></figure><p>然後去網際網路選項裡把Scoks Proxy設定為localhost:3128,就可以透過其他伺服器瀏覽網頁了。</p><p>參考:<br><a href="http://josephj.com/entry.php?id=312" target="_blank" rel="noopener">反向建立 SSH Tunnel、免 VPN 連回公司</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;透過一台外部的Linux SSH進行Scoks5 Proxy只要執行一行指令&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Linux" scheme="https://jim51.github.io/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="https://jim51.github.io/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Wordpress UpdraftPlus 備份使用 cron</title>
@@ -56,9 +78,9 @@
       <category term="Docker" scheme="https://jim51.github.io/categories/Docker/"/>
     
     
-      <category term="Linux" scheme="https://jim51.github.io/tags/Linux/"/>
-    
       <category term="Docker" scheme="https://jim51.github.io/tags/Docker/"/>
+    
+      <category term="Linux" scheme="https://jim51.github.io/tags/Linux/"/>
     
   </entry>
   
@@ -449,32 +471,6 @@
     
     
       <category term="Windows" scheme="https://jim51.github.io/tags/Windows/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SQL 刪除重複資料</title>
-    <link href="https://jim51.github.io/2018/04/24/sql-repeat-delete/"/>
-    <id>https://jim51.github.io/2018/04/24/sql-repeat-delete/</id>
-    <published>2018-04-24T08:24:52.000Z</published>
-    <updated>2018-04-24T08:56:49.686Z</updated>
-    
-    <content type="html"><![CDATA[<p>有時整理SQL資料時需要刪除重覆資料，在這裡做個筆記。</p><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">set</span> rowcount <span class="number">1</span></span><br><span class="line"><span class="keyword">WHILE</span> <span class="number">1</span>=<span class="number">1</span></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">  <span class="keyword">delete</span> <span class="keyword">from</span> <span class="keyword">table</span> <span class="keyword">where</span> <span class="keyword">id</span> <span class="keyword">in</span>(<span class="keyword">select</span> <span class="keyword">id</span> <span class="keyword">from</span> <span class="keyword">table</span> <span class="keyword">group</span> <span class="keyword">by</span> <span class="keyword">id</span> <span class="keyword">having</span> <span class="keyword">count</span>(*)&gt;<span class="number">1</span>)</span><br><span class="line">  <span class="keyword">if</span> @@rowcount=<span class="number">0</span></span><br><span class="line">     break</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">set</span> rowcount <span class="number">0</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;有時整理SQL資料時需要刪除重覆資料，在這裡做個筆記。&lt;/p&gt;
-&lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span cla
-      
-    
-    </summary>
-    
-      <category term="TSQL" scheme="https://jim51.github.io/categories/TSQL/"/>
-    
-    
-      <category term="TSQL" scheme="https://jim51.github.io/tags/TSQL/"/>
     
   </entry>
   

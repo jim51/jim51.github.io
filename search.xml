@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>透過SSH進行Socks5 Proxy</title>
+      <link href="/2019/05/31/proxy-from-ssh/"/>
+      <url>/2019/05/31/proxy-from-ssh/</url>
+      <content type="html"><![CDATA[<p>透過一台外部的Linux SSH進行Scoks5 Proxy只要執行一行指令</p><a id="more"></a><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -NfD 3128 username@home.com</span><br></pre></td></tr></table></figure><p>然後去網際網路選項裡把Scoks Proxy設定為localhost:3128,就可以透過其他伺服器瀏覽網頁了。</p><p>參考:<br><a href="http://josephj.com/entry.php?id=312" target="_blank" rel="noopener">反向建立 SSH Tunnel、免 VPN 連回公司</a></p>]]></content>
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>Wordpress UpdraftPlus 備份使用 cron</title>
       <link href="/2019/05/31/cron-wordpress-updraftplus/"/>
       <url>/2019/05/31/cron-wordpress-updraftplus/</url>
@@ -38,9 +59,9 @@
       
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> Docker </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
       
