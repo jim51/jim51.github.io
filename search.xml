@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>Wordpress UpdraftPlus 備份使用 cron</title>
+      <link href="/2019/05/31/cron-wordpress-updraftplus/"/>
+      <url>/2019/05/31/cron-wordpress-updraftplus/</url>
+      <content type="html"><![CDATA[<p>UpdraftPlus是一套很多Wordpress網站使用的備份軟體<br>如果要使用Linux的排程做自動備份該怎麼設定呢?<br><a id="more"></a></p><p>先打開cron編輯器</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo crontab -e</span><br></pre></td></tr></table></figure><p>你會看到一份文件檔使用nano編輯器打開,這時只要加上下面這行<br>(記得將domain name替換為實際網域)</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*/10 * * * * curl https://domain.name/wp-cron.php?doing_wp_cron &gt; /dev/null 2&gt;&amp;1</span><br></pre></td></tr></table></figure><p>它會自動每十分鐘呼叫UpdraftPlus來執行備份動作,這樣就可以了。<br>還可以用cron的Log看看是否有正常的執行</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo grep CRON /var/log/syslog</span><br></pre></td></tr></table></figure>]]></content>
+      
+      <categories>
+          
+          <category> Wordpress </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Wordpress </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>使用cron確認mysql是否crash並重新啟動</title>
       <link href="/2019/05/28/check-docker-mysql-restart/"/>
       <url>/2019/05/28/check-docker-mysql-restart/</url>

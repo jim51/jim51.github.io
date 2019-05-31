@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Tag: Kubernetes | JIM51</title>
+  <title>Wordpress UpdraftPlus 備份使用 cron | JIM51</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
   <meta name="HandheldFriendly" content="True">
@@ -12,13 +12,18 @@
   <link rel="shortcut icon" href="/">
   <link rel="alternate" href="/atom.xml" title="JIM51">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="JIM51">
-<meta property="og:url" content="https://jim51.github.io/tags/Kubernetes/index.html">
+  <meta name="description" content="UpdraftPlus是一套很多Wordpress網站使用的備份軟體如果要使用Linux的排程做自動備份該怎麼設定呢?">
+<meta name="keywords" content="Wordpress">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Wordpress UpdraftPlus 備份使用 cron">
+<meta property="og:url" content="https://jim51.github.io/2019/05/31/cron-wordpress-updraftplus/index.html">
 <meta property="og:site_name" content="JIM51">
+<meta property="og:description" content="UpdraftPlus是一套很多Wordpress網站使用的備份軟體如果要使用Linux的排程做自動備份該怎麼設定呢?">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-31T01:18:13.667Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JIM51">
+<meta name="twitter:title" content="Wordpress UpdraftPlus 備份使用 cron">
+<meta name="twitter:description" content="UpdraftPlus是一套很多Wordpress網站使用的備份軟體如果要使用Linux的排程做自動備份該怎麼設定呢?">
     
   <link href="https://fonts.googleapis.com/css?family=Inconsolata|Titillium+Web" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
@@ -117,135 +122,68 @@
   <div class="l_body">
     <div class='container clearfix'>
       <div class='l_main'>
-        
-  <script>
-    window.subData= { title:'Tag : Kubernetes'}
-  </script>
-
-<section class="post-list">
+        <article id="post-cron-wordpress-updraftplus" class="post white-box article-type-post" itemscope="" itemprop="blogPost">
+	<section class="meta">
+	<h2 class="title">
+  	<a href="/2019/05/31/cron-wordpress-updraftplus/">
+    	Wordpress UpdraftPlus 備份使用 cron
+    </a>
+  </h2>
+	<time>
+	  May 31, 2019
+	</time>
 	
-    <div class="post-wrapper">
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/08/26/minikube-change-ip/">
-        minikube 當本地端IP變動時啟動問題
-      </a>
-    </h2>
-    
-    <time>
-      Aug 26, 2018
-    </time>
-		
     
     <div class="cats">
-        <a href="/categories/Kubernetes/">Kubernetes</a>
+        <a href="/categories/Wordpress/">Wordpress</a>
     </div>
 
-  </section>
-  <section class="article typo">
-	  <p>minikube執行在不會變動IP的桌機是完全沒問題，但如果是執行在常移動的筆電上就會遇到IP變動無法使用的情況。<br>執行kubectl會出現Unable to connect to the server。<br>
+	</section>
+	
+		<section class="toc-wrapper"></section>
+	
+	<section class="article typo">
+  	<div class="article-entry" itemprop="articleBody">
+    	<p>UpdraftPlus是一套很多Wordpress網站使用的備份軟體<br>如果要使用Linux的排程做自動備份該怎麼設定呢?<br><a id="more"></a></p>
+<p>先打開cron編輯器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo crontab -e</span><br></pre></td></tr></table></figure>
+<p>你會看到一份文件檔使用nano編輯器打開,這時只要加上下面這行<br>(記得將domain name替換為實際網域)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">*/10 * * * * curl https://domain.name/wp-cron.php?doing_wp_cron &gt; /dev/null 2&gt;&amp;1</span><br></pre></td></tr></table></figure>
+<p>它會自動每十分鐘呼叫UpdraftPlus來執行備份動作,這樣就可以了。<br>還可以用cron的Log看看是否有正常的執行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo grep CRON /var/log/syslog</span><br></pre></td></tr></table></figure>
 
-    
-	  <div class="readmore">
-      <a href="/2018/08/26/minikube-change-ip/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
+  	</div>
+	  
+	  <div class="article-tags tags">
       
-        <a href="/tags/Kubernetes/">Kubernetes</a>
+        <a href="/tags/Wordpress/">Wordpress</a>
       
 	  </div>
     
-  </p></section>
-</article>
-    </div>
-  
-    <div class="post-wrapper">
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/08/26/minikube-v-28-hyper-v-shutdown/">
-        minikube v28 版本在 Windows 10 Hyper-V 無法關閉VM問題
-      </a>
-    </h2>
-    
-    <time>
-      Aug 26, 2018
-    </time>
 		
-    
-    <div class="cats">
-        <a href="/categories/Kubernetes/">Kubernetes</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <p>因為維護或是作業需要有時會需要關閉Minikube，在V28版本遇到一個問題。<br>就是當下關閉指時後Hyper-V的VM會一直關不了機。<br>
-
-    
-	  <div class="readmore">
-      <a href="/2018/08/26/minikube-v-28-hyper-v-shutdown/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Kubernetes/">Kubernetes</a>
-      
-	  </div>
-    
-  </p></section>
+	
+		<div class="art-item-footer">
+				
+				
+					<span class="art-item-right">next：<a href="/2019/05/28/check-docker-mysql-restart/" rel="next" title="使用cron確認mysql是否crash並重新啟動">
+						使用cron確認mysql是否crash並重新啟動
+					</a><i class="icon icon-chevron-thin-right"></i></span>
+				
+		</div>
+	
+	</section>
+	
+		<section id="comments">
+			<div id="disqus_thread"></div>
+		</section>
+	
 </article>
-    </div>
-  
-    <div class="post-wrapper">
-      <article class="post reveal">
-  <section class="meta">
-    
-    <h2 class="title">
-      <a href="/2018/08/25/kubernetes-install/">
-        Kubernetes在Windows 10安裝手記
-      </a>
-    </h2>
-    
-    <time>
-      Aug 25, 2018
-    </time>
-		
-    
-    <div class="cats">
-        <a href="/categories/Kubernetes/">Kubernetes</a>
-    </div>
-
-  </section>
-  <section class="article typo">
-	  <p>Kubernetes是一個開源系統，用於跨多個主機管理容器化應用程序，為應用程序的部署，維護和擴展提供基本機制。<br>本篇著重在Windows的安裝部份。<br>
-
-    
-	  <div class="readmore">
-      <a href="/2018/08/25/kubernetes-install/">Read More</a>
-    </div>
-    
-    
-    
-	  <div class="full-width auto-padding tags">
-      
-        <a href="/tags/Kubernetes/">Kubernetes</a>
-      
-	  </div>
-    
-  </p></section>
-</article>
-    </div>
-  
-</section>
-
+<script>
+	window.subData = {
+		title: 'Wordpress UpdraftPlus 備份使用 cron',
+		tools: true
+	}
+</script>
 
       </div>
       <aside class='l_side'>
@@ -323,11 +261,13 @@
 <script>
   var disqus_shortname = 'jim51blog';
   
+  var disqus_url = 'https://jim51.github.io/2019/05/31/cron-wordpress-updraftplus/';
+  
   (function(){
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   })();
 </script>
